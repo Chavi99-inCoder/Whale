@@ -66,6 +66,7 @@
         </div>
 
         <div role="main" class="ui-content onboard1para">
+            <center>
             <h3>All you have to do is visit these amazing locations and simply scan the QR code there and claim your PRIZE!</h3>
             <h3>Also we offer many more games and fun activites</h3>
             <br/>
@@ -73,10 +74,11 @@
                 you can get to all places swiftly and easily</h3>
 
 
-            <h5>“Soon may the Wellerman come
+            <h5 style="font-weight: 300">“Soon may the Wellerman come
                 To bring us sugar and tea and rum
                 One day, when the tonguing is done
                 We'll take our leave and go”</h5>
+            </center>
         </div>
 
         <div class="oboardBackButton">
@@ -99,25 +101,25 @@
 
         <div role="main" class="loginform">
             <form>
-                <label for="text-basic">Username:</label>
-                <input type="text" name="text-basic" id="text-basic" value="">
+                <label for="text-basic">Email</label>
+                <input type="text" name="text-basic" id="text-basic" placeholder="username@whale.com" value="">
 
-                <label for="text-basic">Password:</label>
-                <input type="password" name="text-basic" id="text-basic" value="">
+                <label for="text-basic">Password</label>
+                <input type="password" name="text-basic" id="text-basic" placeholder="Password must be atleast 8 characters" value="">
 
                 <div class="forgotpassword">
-                    <label for="text-basic">Forgot Password?</label>
+                    <label for="text-basic" style="color: #1f069d;">Forgot Password?</label>
                 </div>
                 <br/><br/><br/>
                 <div class="signupButton">
                     <button class="ui-btn" style="background-color: #1f069d;" ><a style="color: white;" href="#home">Sign In</a></button>
-                    <center><label for="text-basic">Don't have an account? <b>Sign Up</b></label></center>
+                    <center><label style="color: #1f069d;" for="text-basic">Don't have an account? <b>Sign Up</b></label></center>
                 </div>
 
                 <br/><br/><br/><br/><br/>
                 <div class="socialmediabutton">
-                    <button class="ui-btn"><a href="#login">Sign In with Google</a></button>
-                    <button class="ui-btn"><a href="#login">Sign In with Facebook</a></button>
+                    <button class="ui-btn"><a href="#login" style="color: #1f069d;">Sign In with Google</a></button>
+                    <button class="ui-btn"><a href="#login" style="color: #1f069d;">Sign In with Facebook</a></button>
                 </div>
             </form>
         </div>
@@ -127,19 +129,22 @@
 
     <!-- Start of Home page -->
     <div data-role="page" id="home">
-        <input type="password" name="text-basic" id="text-basic" value="">
+        <div style="margin-left: 6%; margin-right: 6%;">
+            <input type="text" name="text-basic" id="text-basic" value="" placeholder="Search Location">
+        </div>
+        
 
            <div id="map">
             
            </div>
            
            <div style="margin-left: 20%; margin-right: 20%;">
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 20px;" class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">BOOKING</a></button>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 20px;" class="ui-btn"><a style="color: #1f069d;;" href="#home">FEED</a></button>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 20px;" class="ui-btn"><a style="color: #1f069d;;" href="#home">TRESURE HUNT</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">BOOKING</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#home">FEED</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#home">TRESURE HUNT</a></button>
            </div>
 
-        <div data-role="navbar" class="mainFooterNav">
+        <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
                     <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -156,7 +161,7 @@
     <div data-role="page" id="profile">
 
 
-     <div data-role="navbar" class="mainFooterNav">
+     <div data-role="navbar" class="footer">
          <table width="100%">
              <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -173,7 +178,7 @@
  <div data-role="page" id="booking">
 
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -189,20 +194,29 @@
 
 <!-- Start of bookingTicket page -->
 <div data-role="page" id="bookingTicket">
+    <br/>
     <div class="bookingbackbutton">
         <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
     </div>
-<br/><br/>
 
-    <div>
+    <div class="bookingHeader">
+        <h4>Booking Tickets</h4>
+    </div>
+
+
+    <div style="margin-right: 10%;margin-left: 15%;">
         <form>
             <label for="textinput-8" class="ui-hidden-accessible">Your Location</label>
             <input type="text" name="textinput-8" id="textinput-8" placeholder="Your Location" value="" data-mini="true">
+            
+            <div style="margin-top: 4%;">
+                <label for="textinput-8" class="ui-hidden-accessible">Choose Destination</label>
+                <input type="text" name="textinput-8" id="textinput-8" placeholder="Your Destination" value="" data-mini="true">
+            </div>
 
-            <label for="textinput-8" class="ui-hidden-accessible">Your Destination</label>
-            <input type="text" name="textinput-8" id="textinput-8" placeholder="Your Destination" value="" data-mini="true">
-
-            <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#checkAvailabilty">Check Availability</a></button>
+            <div style="margin-right: 15%;margin-left: 15%; margin-top: 5%;">
+                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#checkAvailabilty">Check Availability</a></button>
+            </div>
              
         </form>
     </div>
@@ -212,12 +226,12 @@
             <tr>
                 <td><b>Recently Brought</b></td>
                 <td>
-                    <div class="ui-field-contain" style="left: 60%; ">
+                    <div class="ui-field-contain" style="left: 80%; margin-top: -10%;">
                         <select name="select-native-2" id="select-native-2" data-mini="true">
-                            <option value="1">Sort By</option>
-                            <option value="2">Sort By Date</option>
-                            <option value="3">Sort By Week</option>
-                            <option value="4">Sort By Month</option>
+                            <option value="1">Sort By &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="2">Sort By Date &nbsp;</option>
+                            <option value="3">Sort By Week &nbsp;</option>
+                            <option value="4">Sort By Month &nbsp;</option>
                         </select>
                     </div>
                 </td>
@@ -225,104 +239,190 @@
         </table>
     </div>
 
-            <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
-                <li data-role="list-divider">Friday, October 8, 2021 <span class="ui-li-count">2</span></li>
+    <div style="margin-top: -3%;">
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="index.html">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Down Town</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Glastonbury Abbey</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
 
-                <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color: aquamarine; left: 50%;"><center>Completed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
-                </li>
-                 <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color:orangered; left: 50%;"><center>Failed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
-                </li>
-                 <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color: aquamarine; left: 50%;"><center>Completed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="index.html">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                    <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
 
-                <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">2</span></li>
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="index.html">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                    <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
 
-                <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color: aquamarine; left: 50%;"><center>Completed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
+
+                <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 4%;">
+                    <div style="margin-top: -5%;">
+                        <a href="index.html">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                    <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                 <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color: aquamarine; left: 50%;"><center>Completed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
+
+                 <li style="margin-top: 4%;">
+                    <div style="margin-top: -5%;">
+                        <a href="index.html">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                    <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                 <li>
-                    <a href="index.html">
-                        <h3>Princess Abbey : $ 250</h3>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <label for="textinput-8" class="ui-accessible" style="background-color: aquamarine; left: 50%;"><center>Completed</center></label>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    <table width="100%">
-                        <tr>
-                            <td>Down Town</td>
-                            <td><b style="color: blueviolet;"> TO </b></td>
-                            <td>Glastonbury Abbey</td>
-                        </tr>
-                    </table>
-                    </a>
-                </li>              
+
+                 <li style="margin-top: 4%;">
+                    <div style="margin-top: -5%;">
+                        <a href="index.html">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -6%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                    <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#checkAvailabilty">Completed</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>   
             </ul>
-    <div data-role="navbar" class="mainFooterNav">
+    </div>
+            
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -354,109 +454,193 @@
     </table>
 
     <div>
-        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
-                <li data-role="list-divider">Friday, October 8, 2021 <span class="ui-li-count">2</span></li>
-                <li>
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
                     <a href="#bookNow">
-                    <h2>Stephen Weber : <b style="color:green">Book Now</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Down Town</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Glastonbury Abbey</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
 
-                <li>
-                    <a href="#bookNow">
-                    <h2>Stephen Weber : <b style="color:orangered">Not Availabile</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
 
 
-                <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">4</span></li>
-                <li>
-                    <a href="#bookNow">
-                    <h2>Stephen Weber : <b style="color:green">Book Now</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
+                <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
 
-                <li>
-                    <a href="#bookNow">
-                    <h2>Stephen Weber : <b style="color:green">Book Now</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
 
-                <li>
-                    <a href="#bookNow">
-                    <h2>Stephen Weber : <b style="color:green">Book Now</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
-                </li>
 
-                <li>
-                    <a href="#bookNow">
-                            <h2>Stephen Weber : <b style="color:green">Book Now</b> </h2>
-                    <p><strong>Ticket Code : 0VJ76</strong></p>
-                    <table width="100%">
-                    <tr>
-                        <td>Down Town</td>
-                        <td><b style="color: blueviolet;"> TO </b></td>
-                        <td>Glastonbury Abbey</td>
-                    </tr>
-                    </table>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a>
-                    
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
                 </li>
             </ul>
+            <br/><br/>
+        
     </div>
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -689,7 +873,7 @@
 
     
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -741,7 +925,7 @@
 
     </div>
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -811,7 +995,7 @@
 
     </div>
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -890,7 +1074,7 @@
 
         <br/>
         <br/>
-        <div data-role="navbar" class="mainFooterNav">
+        <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
                     <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -922,7 +1106,7 @@
         <a href="#home" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >Home</a>
     </center>
     
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -975,7 +1159,7 @@
    
     
     
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1052,7 +1236,7 @@
 
    <br/><br/><br/><br/><br/><br/>
     
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1099,7 +1283,7 @@
         <br/>
         <h5><b>Regard, <br/>Team of the Whale.</b></h5>
     </center>
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1141,7 +1325,7 @@
         <h5>Visit Whale : Whale No -45/8, Down Town, London.</h5>
     </div>
 
-    <div data-role="navbar" class="mainFooterNav">
+    <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
                 <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1215,7 +1399,7 @@
         </div>
         
     
-        <div data-role="navbar" class="mainFooterNav">
+        <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
                     <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1279,7 +1463,7 @@
 
         <button class="ui-btn">Okay</button>
         </div>
-        <div data-role="navbar" class="mainFooterNav">
+        <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
                     <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
@@ -1309,7 +1493,7 @@
         <li><a href="#">Hear is your FAQ #5</a></li>
     </ul>
     
-        <div data-role="navbar" class="mainFooterNav">
+        <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
                     <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
