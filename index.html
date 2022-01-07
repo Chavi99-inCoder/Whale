@@ -12,8 +12,58 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
 
 </script>
+
+<script>
+    function locationvalidate(){
+        var location = document.getElementsByName("loc")[0].value;
+        var desination = document.getElementsByName("dec")[0].value;
+
+        if(location == null || location == '' || desination == null || desination == '')
+        {
+            window.location.href = "#errorpopup";
+        }
+        else
+        {
+            window.location.href = "#checkAvailabilty";
+        }
+    }
+
+    function loginvalidate(){
+        var username = document.getElementsByName("username")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+
+        if(username == null || username == '' || password == null || password == '')
+        {
+            window.location.href = "#errorlogin";
+        }
+        else
+        {
+            window.location.href = "#home";
+        }
+    }
+</script>
 </head>
 <body>
+    <div id="errorpopup" class="overlay">
+        <div class="popup">
+          <h2>Invalid!</h2>
+          <a class="close" href="#bookingTicket">&times;</a>
+          <div class="content">
+            Please Enter Valid Location and Desination
+          </div>
+        </div>
+      </div>
+
+      <div id="errorlogin" class="overlay">
+        <div class="popup">
+          <h2>Invalid!</h2>
+          <a class="close" href="#login">&times;</a>
+          <div class="content">
+            Please Enter Valid Username and Password
+          </div>
+        </div>
+      </div>
+    
 
     <!-- Start of first page -->
     <div data-role="page" id="foo" class="startingbg">
@@ -102,17 +152,17 @@
         <div role="main" class="loginform">
             <form>
                 <label for="text-basic">Email</label>
-                <input type="text" name="text-basic" id="text-basic" placeholder="username@whale.com" value="">
+                <input type="text" name="username" id="username" placeholder="username@whale.com" value="">
 
                 <label for="text-basic">Password</label>
-                <input type="password" name="text-basic" id="text-basic" placeholder="Password must be atleast 8 characters" value="">
+                <input type="password" name="password" id="password" placeholder="Password must be atleast 8 characters" value="">
 
                 <div class="forgotpassword">
                     <label for="text-basic" style="color: #1f069d;">Forgot Password?</label>
                 </div>
                 <br/><br/><br/>
                 <div class="signupButton">
-                    <button class="ui-btn" style="background-color: #1f069d;" ><a style="color: white;" href="#home">Sign In</a></button>
+                    <button class="ui-btn" style="background-color: #1f069d;" ><a style="color: white;"onclick="loginvalidate()">Sign In</a></button>
                     <center><label style="color: #1f069d;" for="text-basic">Don't have an account? <b>Sign Up</b></label></center>
                 </div>
 
@@ -194,9 +244,20 @@
 
 <!-- Start of bookingTicket page -->
 <div data-role="page" id="bookingTicket">
-    <br/>
+
     <div class="bookingbackbutton">
-        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+        <a href="#confirmationtoclose" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
+
+    <div data-role="popup" id="confirmationtoclose" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
+            
+        </div>
     </div>
 
     <div class="bookingHeader">
@@ -207,15 +268,15 @@
     <div style="margin-right: 10%;margin-left: 15%;">
         <form>
             <label for="textinput-8" class="ui-hidden-accessible">Your Location</label>
-            <input type="text" name="textinput-8" id="textinput-8" placeholder="Your Location" value="" data-mini="true">
+            <input type="text" name="loc" id="loc" placeholder="Your Location" value="" data-mini="true">
             
             <div style="margin-top: 4%;">
                 <label for="textinput-8" class="ui-hidden-accessible">Choose Destination</label>
-                <input type="text" name="textinput-8" id="textinput-8" placeholder="Your Destination" value="" data-mini="true">
+                <input type="text" name="dec" id="dec" placeholder="Your Destination" value="" data-mini="true">
             </div>
 
             <div style="margin-right: 15%;margin-left: 15%; margin-top: 5%;">
-                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#checkAvailabilty">Check Availability</a></button>
+                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" onclick="locationvalidate()">Check Availability</a></button>
             </div>
              
         </form>
@@ -436,11 +497,26 @@
 
 <!-- Start of booking page -->
 <div data-role="page" id="checkAvailabilty">
+    <br/>
     <div class="bookingbackbutton">
-        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+        <a href="#confirmationtoclose2" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
     </div>
-    <br/><br/>
-    <table>
+
+    <div data-role="popup" id="confirmationtoclose2" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#checkAvailabilty">Cancel</a></button>
+            
+        </div>
+    </div>
+
+    <div class="bookingHeader">
+        <h4>Check Availability</h4>
+    </div>
+    <table style="width: 100%; ">
         <tr>
             <td>
                 <label for="date">Start Date:</label>
@@ -656,219 +732,300 @@
 
 <!-- Start of booking page -->
 <div data-role="page" id="bookNow">
-
-    <div style="background-color: indigo;">
-        <ul data-role="listview" data-inset="true"  data-filter-placeholder="Search..." style="background-color: indigo;">
-            <li>
-                <a href="#bookNow">
-                        <h2>Stephen Weber</h2>
-                <p><strong>Ticket Code : 0VJ76</strong></p>
-                <table width="100%">
-                <tr>
-                    <td>Down Town</td>
-                    <td><b style="color: blueviolet;"> TO </b></td>
-                    <td>Glastonbury Abbey</td>
-                </tr>
-                </table>
-                    <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                </a>
-                
-            </li>
-        </ul>
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose3" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
     </div>
 
-    <div data-role="tabs" id="tabs">
+    <div data-role="popup" id="confirmationtoclose3" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#checkAvailabilty">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNow">Cancel</a></button>
+            
+        </div>
+    </div>
+
+    <div class="bookingHeader">
+        <h4>Book Now</h4>
+    </div>
+
+ 
+        <div style="margin-top: -5%; margin-left: 10%; margin-right: 10%;">
+            <br/>
+            <a href="#bookNow">
+                <table width="100%" >
+                    <tr>
+                        <td>Down Town &nbsp; <b style="color: blueviolet;"> TO &nbsp;</b> Glastonbury Abbey</td>
+                    </tr>
+                </table>
+                <h5 style="margin-top: -4%;  color: slategray;">6:00 AM to 11:00 AM</h5>
+                <hr>
+            </a>
+        </div>
+
+    <br/>
+    <div data-role="tabs" id="tabs" style="margin-top: -18%;">
             
 
-          <div data-role="navbar">
-            <Table  width="100%">
-                <tr>
-                    <td><a href="#one" data-ajax="false">1st Track</a></td>
-                    <td><a href="#two" data-ajax="false">2nd Track</a></td>
-                    <td><a href="#three" data-ajax="false">3rd Track</a></td>
-                </tr>
-            </Table>
-            
-          </div>
-          <div id="one" class="ui-body-d ui-content">
-                <center>
-                <table>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top">Selected</a> </td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">Available</a></td>
-                        <td>&#160;</td>
-                        <td>&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top">Booked</a></td>
-                    </tr>
-                </table>
-                <table>                    
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B1</a></td>
-                        <td>&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B2</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D2</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B3</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D3</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B4</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D4</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B5</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D5</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B6</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D6</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">A7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">B7</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">C7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">D7</a></td>
-                    </tr>
-                </table>
-                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#bookNowpayment1">Continue</a></button>
-            </center>
-          </div>
-          <div id="two">
-                <center>
-                <table>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F1</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F2</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H2</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F3</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H3</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F4</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H4</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F5</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H5</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F6</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H6</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">E7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">F7</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">G7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">H7</a></td>
-                    </tr>
-                </table>
-                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#bookNowpayment1">Continue</a></button>
-            </center>
-          </div>
-        <div id="three">
-                <center>
-                <table>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J1</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K1</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L1</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J2</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K2</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L2</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J3</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K3</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L3</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J4</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K4</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L4</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J5</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K5</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L5</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J6</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K6</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L6</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">I7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">J7</a></td>
-                        <td>&#160;&#160;&#160;&#160;</td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">K7</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top">L7</a></td>
-                    </tr>
-                </table>
-                <button style="background-color: #1f069d;" class="ui-btn"> <a style="color: white;" href="#bookNowpayment1">Continue</a></button>
-            </center>
-            <br/><br/><br/><br/>
+        <div data-role="tabs" id="tabs">
+              <div data-role="navbar"  style="margin-left: 12%; width: 100%;">
+                <ul>
+                  <li><a href="#one" data-ajax="false">1st Track</a></li>
+                  <li><a href="#two" data-ajax="false">2nd Track</a></li>
+                  <li><a href="#three" data-ajax="false">3rd Track</a></li>
+                 <li hidden><a href="#three" data-ajax="false"></a></li>
+                </ul>
               </div>
+              <div style="margin-top: -18%;">
+                <div id="one" >
+                    <br/>
+                    <center>
+                    <table>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <table>                    
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">A1</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">B1</a></td>
+                            <td>&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C1</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">A2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">B2</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D2</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A3</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B3</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C3</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D3</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A4</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">B4</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C4</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D4</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A5</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B5</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C5</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D5</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A6</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B6</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C6</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D6</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">A7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B7</a></td>
+                            <td>&#160;&#160;&#160;&#160;</td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D7</a></td>
+                        </tr>
+                    </table>
+                    <div style="margin-left: 10%; margin-right: 10%; ">
+                        <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                    </div>
+                    </center>
+                  </div>
+                  <div id="two">
+                    <center>
+                            <table>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <table>                    
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">E1</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">F1</a></td>
+                                    <td>&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G1</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H1</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">E2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">F2</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H2</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E3</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F3</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G3</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H3</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E4</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">F4</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G4</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H4</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E5</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F5</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G5</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H5</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E6</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F6</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G6</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H6</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">E7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F7</a></td>
+                                    <td>&#160;&#160;&#160;&#160;</td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H7</a></td>
+                                </tr>
+                            </table>
+                            <div style="margin-left: 10%; margin-right: 10%; ">
+                                <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                            </div>
+                            </center>
+                            <br/><br/>
+                  </div>
+                  <div id="three">
+                    <center>
+                        <table>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table>                    
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">&#160;I1</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">&#160;J1</a></td>
+                                <td>&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K1</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L1</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">&#160;I2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">&#160;J2</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L2</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I3</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J3</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K3</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L3</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I4</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;J4</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K4</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L4</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I5</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J5</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K5</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L5</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I6</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J6</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K6</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L6</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;I7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J7</a></td>
+                                <td>&#160;&#160;&#160;&#160;</td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L7</a></td>
+                            </tr>
+                        </table>
+                        <div style="margin-left: 10%; margin-right: 10%; ">
+                            <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                        </div>
+                        
+                        <div data-role="popup" id="seatpopup3" data-theme="a" style="" class="ui-corner-all">
+                            <div class="onboardCloseButton">
+                                <a href="#bookNow" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+                            </div>
+                            <br/>
+                            <h3 style="color: darkgrey;">Ticket Details</h3>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                            <h3>1st Track</h3>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>Seat No : B3</td>
+                                    <td>OJY457A3</td>
+                                </tr>
+                                <tr>
+                                    <td>Seat No : a3</td>
+                                    <td>OJY457A3</td>
+                                </tr>
+                                <tr>
+                                    <td>Seat No : c3</td>
+                                    <td>OJY457A3</td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <h3>2nd Track</h3>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>Seat No : B3</td>
+                                    <td>OJY457A3</td>
+                                </tr>
+                                <tr>
+                                    <td>Seat No : a3</td>
+                                    <td>OJY457A3</td>
+                                </tr>                                
+                            </table>
+                            <br/>
+                            <div style="margin-left: 10%; margin-right: 10%; ">
+                                <a href="#bookNowpayment1"  style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b">Continue</a>
+                            </div>
+                        </div>
+                        </center>
+                        <br/><br/>
+                        
+                  </div>
+            </div>
         </div>
+
+    </div>
 
 
     
@@ -889,13 +1046,35 @@
 
 <!-- Start of booking page -->
 <div data-role="page" id="bookNowpayment1">  
-    <h3>Book Now!</h3>
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose4" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
 
+    <div data-role="popup" id="confirmationtoclose4" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNow">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment1">Cancel</a></button>
+            
+        </div>
+    </div>
+
+
+    <div class="bookingHeader">
+        <h4>Book Now</h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:20%"></div>
+    </div>
+      
     <div>
-        <ul data-role="listview" data-inset="true">
+        <ul style="list-style-type:none;" data-inset="true">
                 <li>
                 <h2>Package Details</h2>
-                <table>
+                <table style="width: 100%;">
                     <tr>
                         <td>Package Price</td>
                         <td>:</td>
@@ -906,23 +1085,35 @@
                         <td>:</td>
                         <td>4</td>
                     </tr>
+                </table>
+                <hr/>
+                <table style="width: 100%;">
                     <tr>
-                        <td><b>Total Price</b></td>
-                        <td><b>:</b></td>
-                        <td><b>$600</b></td>
+                        <td><b>Total Price &nbsp;&nbsp;&nbsp; &nbsp;</b></td>
+                        <td><b>: </b></td>
+                        <td><b>$600  </b></td>
                     </tr>
                 </table>
                 </li>                
             </ul>
-            <a href="#discountpopup" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
-            
-            <div data-role="popup" id="discountpopup" data-theme="a" class="ui-corner-all">
-                <h4>Wow!! You have 30% offer for one Ticket.</h4>
-                <center><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-tag ui-btn-icon-left ui-btn-a" data-transition="pop" style="background-color: lawngreen;">Get 30% Off your ticket</a></center>
-                <br/><br/>
-                <a href="#bookNowpayment2" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" >Use Now</a>
-            </div>
+    </div>
 
+    <div style="margin-left: 10%; margin-right: 10%; margin-top: 50%;">
+        <a href="#discountpopup" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+    </div>
+    
+    <div data-role="popup" id="discountpopup" data-theme="a" class="ui-corner-all">
+        <div class="onboardCloseButton">
+            <a href="#bookNowpayment2" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+        </div>
+        <br/>
+        <h4>Wow!! You have 30% offer for one Ticket.</h4>
+        <center><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-tag ui-btn-icon-left ui-btn-a" data-transition="pop" style="background-color: lawngreen;">Get 30% Off your ticket</a></center>
+        <br/>
+        <div  style="margin-left: 10%; margin-right: 10%; ">
+            <a href="#bookNowpayment2" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" >Use Now</a>
+        </div>
+        <br/>
     </div>
 
     <div data-role="navbar" class="footer">
@@ -941,13 +1132,33 @@
 
 <!-- Start of booking page -->
 <div data-role="page" id="bookNowpayment2">  
-    <h3>Book Now!</h3>
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose5" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
 
+    <div data-role="popup" id="confirmationtoclose5" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment1">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            
+        </div>
+    </div>
+
+    <div class="bookingHeader">
+        <h4>Book Now</h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:60%"></div>
+    </div>
     <div>
         <center><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-tag ui-btn-icon-left ui-btn-a" data-transition="pop" style="background-color: lawngreen;">Get 30% Off your ticket</a></center>
         <ul data-role="listview" data-inset="true">
                 <li>
-                <table>
+                <table style="width: 100%;">
                     <tr>
                         <td>Package Price</td>
                         <td>:</td>
@@ -958,8 +1169,11 @@
                         <td>:</td>
                         <td>%45</td>
                     </tr>
+                </table>
+                <hr>
+                <table style="width: 100%;">
                     <tr>
-                        <td><b>Discount</b></td>
+                        <td><b>Discount&nbsp;&nbsp;&nbsp;</b></td>
                         <td><b>:</b></td>
                         <td><b>$45</b></td>
                     </tr>
@@ -967,12 +1181,11 @@
                 </li>                
             </ul>
         
-        <br/>
         
         <ul data-role="listview" data-inset="true">
                 <li>
                 <h2>Package Details</h2>
-                <table>
+                <table style="width: 100%;">
                     <tr>
                         <td>Package Price</td>
                         <td>:</td>
@@ -983,15 +1196,22 @@
                         <td>:</td>
                         <td>%45</td>
                     </tr>
+                    
+                </table>
+                <hr>
+                <table style="width: 100%;">
                     <tr>
-                        <td><b>Offer Price</b></td>
+                        <td><b>Offer Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
                         <td><b>:</b></td>
                         <td><b>$555</b></td>
                     </tr>
                 </table>
                 </li>                
             </ul>
-            <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b">Process Payment</a>
+            <div style="margin-right: 10%; margin-left: 10%;">
+                <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b">Process Payment</a>
+            </div>
+            <br/> <br/>
 
     </div>
 
@@ -1013,63 +1233,89 @@
 
 <!-- Start of payment page -->
 <div data-role="page" id="processpayment">  
-    <h3>Book Now!</h3>
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose6" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
 
+    <div data-role="popup" id="confirmationtoclose6" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment2">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+            
+        </div>
+    </div>
+    <div class="bookingHeader">
+        <h4>Book Now : Payment</h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:90%"></div>
+    </div>
     <div>
-        <a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
-        <a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-right">Visa</a>
-        <a href="#" class="ui-btn ui-btn-inline ">Master</a>
+        <center>
+            <a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-right">Visa</a>
+            <a href="#" class="ui-btn ui-btn-inline ">Master</a>
+        </center>
     </div>
 
     <div>     
                   
                     
-        <form id="credit-card">
+        <form id="credit-card" style="width: 100%; " >
             <div class="row">
-                <div>
-                    <input type="text" id="cc-number" required="required" placeholder="CARD NUMBER">
+                <div style="width: 100%; margin-right: 9%;">
+                    <input type="text"   required="required" placeholder="Card Number">
                     <span id="show-cc-label"></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1">
-                    <input type="text" id='cc-expiration' required="required" placeholder="VALID THRU">
+                    <input type="text"required="required" placeholder="Valid Thru">
                 </div>
-                <div class="col-2">
-                    <input type="text" id="cc-cvv" required="required" placeholder="CVV">
+                <div class="col-2" >
+                    <input type="text"  required="required" placeholder="CVV">
                     <i class="i-icon-payment i-icon-cvv2"></i>
                 </div>
             </div>
             <div class="last-row">
-                <div>
-                    <input type="text" id="cc-name" required="required" placeholder="NAME">
+                <div style="width: 100%; margin-right: 9%;">
+                    <input type="text" required="required" placeholder="Recepient Deatails">
                 </div>
             </div>
         </form>
                     
-        <div class="ui-field-contain">
-            <label for="textinput-5">Mobile Number :</label>
-            <input type="text" name="textinput-5" id="textinput-5" placeholder="For Shipping Related questions only." value="" data-mini="true">
-            <br/>
-            <label for="textinput-5">Email Address : *</label>
-            <input type="text" name="textinput-5" id="textinput-5" placeholder="This address will be used to send you order and bill details." value="" data-mini="true">
-        </div>
-
-        <center>
-            <a href="#popupDialog" data-rel="popup" style="background-color: #1f069d;color: white;border-radius: 15px;" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-shop ui-btn-icon-left ui-btn-b">Pay Now</a>
-        </center>
-        
-        <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-            <div data-role="header" data-theme="a">
-            <h1>Confirmation</h1>
-            </div>
-            <div role="main" class="ui-content">
-                <h3 class="ui-title">Are you sure you want to pay On</h3>
-                <h2 class="ui-title">1795-1116-1010-7865</h2>
-            <p>This action cannot be undone.</p>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
-                <a href="#payconfirmation" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >Confirm</a>
-            </div>
+        <div style="margin-right: 5%; margin-left: 5%;">
+            <div class="ui-field-contain">
+                    <label for="textinput-5">Mobile Number :</label>
+                    <input type="text" name="textinput-5" id="textinput-5" placeholder="For Shipping Related questions only." value="" data-mini="true">
+                    <br/>
+                    <label for="textinput-5">Email Address : *</label>
+                    <input type="text" name="textinput-5" id="textinput-5" placeholder="This address will be used for bill details." value="" data-mini="true">
+                    <center>
+                    <a href="#popupDialog" data-rel="popup" style="background-color: #1f069d;color: white;border-radius: 15px;" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-shop ui-btn-icon-left ui-btn-b">Pay Now</a>
+                    </center>
+                </div>
+                
+               
+                
+                <div data-role="popup" id="popupDialog" data-overlay-theme="w" data-theme="w" data-dismissible="false" style="max-width:400px; background-color: whitesmoke;">
+                    <div data-role="header" data-theme="a">
+                    <h1>Confirmation</h1>
+                    </div>
+                    <div role="main" class="ui-content">
+                        <center>
+                            <h3 class="ui-title">Are you sure you want to pay On</h3>
+                            <h2 class="ui-title">1795-1116-1010-7865</h2>
+                            <p>This action cannot be undone.</p>
+                        </center>
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;" data-rel="back">Cancel</a>
+                        <a href="#payconfirmation" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;">Confirm</a>
+                    </div>
+                </div>
         </div>
 
         <br/>
@@ -1095,7 +1341,8 @@
     
     <br/><br/><br/>
     <center>
-        <h2 style="color:navy;">Payment was Succeffully done!</h2>
+        <img src="../Jquery/img/Vector.png">
+        <h2 style="color:00CC6A;">Payment was Succeffully done!</h2>
 
         <h4>We wish you will enjoy every moment with us...</h4>
 
@@ -1103,7 +1350,9 @@
 
         <h4>Thank you</h4>
 
-        <a href="#home" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >Home</a>
+        <div style="margin-right: 10%; margin-left: 10%;">
+            <a href="#home" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn  ui-btn-b">Back to Home</a>
+        </div>
     </center>
     
     <div data-role="navbar" class="footer">
