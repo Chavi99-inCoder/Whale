@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/jquery.mobile-1.4.5.js"></script>   
+    <script src="js/track1.js"></script>
+    <script src="js/track2.js"></script>
+    <script src="js/track3.js"></script>
+    <script src="js/creditcard.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script> 
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./dist/css/cccheck.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
 
 </script>
 
-<script>
+<script>    
     function locationvalidate(){
         var location = document.getElementsByName("loc")[0].value;
         var desination = document.getElementsByName("dec")[0].value;
@@ -246,18 +250,7 @@
 <div data-role="page" id="bookingTicket">
 
     <div class="bookingbackbutton">
-        <a href="#confirmationtoclose" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
-    </div>
-
-    <div data-role="popup" id="confirmationtoclose" data-theme="a" style="" class="ui-corner-all">     
-        <div role="main" class="ui-content">
-            <center>
-                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
-            </center>
-            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
-            
-        </div>
+        <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
     </div>
 
     <div class="bookingHeader">
@@ -486,11 +479,41 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                <td><li><a href="#bookinghome1" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome2" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome3" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
         </table>
+    
+        <div data-role="popup" id="bookinghome1" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome2" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome3" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
+            </div>
+        </div>
+
     </div><!-- /navbar -->
 </div>
 <!-- /page -->
@@ -719,11 +742,41 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                <td><li><a href="#bookinghome7" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome8" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome9" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
         </table>
+    
+        <div data-role="popup" id="bookinghome7" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#checkAvailabilty">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome8" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#checkAvailabilty">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome9" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#checkAvailabilty">Cancel</a></button>
+            </div>
+        </div>
+
     </div><!-- /navbar -->
 
 </div>
@@ -785,7 +838,7 @@
                     <center>
                     <table>
                         <tr>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: green;">Selected</a> </td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
                         </tr>
@@ -796,19 +849,19 @@
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">A1</a></td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">B1</a></td>
                             <td>&#160;</td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C1</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top btnc1" id="c1" name="c1" onclick="c1()" style="background-color:yellowgreen">C1</a></td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D1</a></td>
                         </tr>
                         <tr>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">A2</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">B2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="A2" name="A2" onclick="A2()" style="background-color: yellowgreen">A2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="B2" name="B2" onclick="B2()" style="background-color: yellowgreen">B2</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C2</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="C2" name="C2" onclick="C2()" style="background-color:yellowgreen">C2</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="D2" name="D2" onclick="D2()" style="background-color:yellowgreen">D2</a></td>
                         </tr>
                         <tr>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A3</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B3</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="B3" name="B3" onclick="B3()" style="background-color:yellowgreen">B3</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C3</a></td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D3</a></td>
@@ -818,32 +871,32 @@
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">B4</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C4</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D4</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="D4" name="D4" onclick="D4()" style="background-color:yellowgreen">D4</a></td>
                         </tr>
                         <tr>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A5</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B5</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="B5" name="B5" onclick="B5()" style="background-color:yellowgreen">B5</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C5</a></td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">D5</a></td>
                         </tr>
                         <tr>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">A6</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B6</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="B6" name="B6" onclick="B6()" style="background-color:yellowgreen">B6</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
                             <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">C6</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D6</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="D6" name="D6" onclick="D6()" style="background-color:yellowgreen">D6</a></td>
                         </tr>
                         <tr>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">A7</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">B7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="A7" name="A7" onclick="A7()" style="background-color:yellowgreen">A7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" id="B7" name="B7" onclick="B7()"style="background-color:yellowgreen">B7</a></td>
                             <td>&#160;&#160;&#160;&#160;</td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">C7</a></td>
-                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">D7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="C7" name="C7" onclick="C7()"style="background-color:yellowgreen">C7</a></td>
+                            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="D7" name="D7" onclick="D7()"style="background-color:yellowgreen">D7</a></td>
                         </tr>
                     </table>
                     <div style="margin-left: 10%; margin-right: 10%; ">
-                        <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                        <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn   ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
                     </div>
                     </center>
                   </div>
@@ -851,7 +904,7 @@
                     <center>
                             <table>
                                 <tr>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: green;">Selected</a> </td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
                                 </tr>
@@ -862,19 +915,19 @@
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">E1</a></td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">F1</a></td>
                                     <td>&#160;</td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G1</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="G1" name="G1" onclick="G1()" style="background-color:yellowgreen">G1</a></td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H1</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">E2</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">F2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="E2" name="E2" onclick="E2()"style="background-color:yellowgreen">E2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="F2" name="F2" onclick="F2()"style="background-color:yellowgreen;">F2</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G2</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="G2" name="G2" onclick="G2()"style="background-color:yellowgreen">G2</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="H2" name="H2" onclick="H2()"style="background-color:yellowgreen">H2</a></td>
                                 </tr>
                                 <tr>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E3</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F3</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="F3" name="F3" onclick="F3()"style="background-color:yellowgreen">F3</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G3</a></td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H3</a></td>
@@ -884,32 +937,32 @@
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">F4</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G4</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H4</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="H4" name="H4" onclick="H4()"style="background-color:yellowgreen">H4</a></td>
                                 </tr>
                                 <tr>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E5</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F5</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="F5" name="F5" onclick="F5()"style="background-color:yellowgreen">F5</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G5</a></td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">H5</a></td>
                                 </tr>
                                 <tr>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">E6</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F6</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="F6" name="F6" onclick="F6()"style="background-color:yellowgreen">F6</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
                                     <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">G6</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H6</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="H6" name="H6" onclick="H6()"style="background-color:yellowgreen">H6</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">E7</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">F7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="E7" name="E7" onclick="E7()"style="background-color:yellowgreen">E7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="F7" name="F7" onclick="F7()"style="background-color:yellowgreen">F7</a></td>
                                     <td>&#160;&#160;&#160;&#160;</td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">G7</a></td>
-                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">H7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="G7" name="G7" onclick="G7()"style="background-color:yellowgreen">G7</a></td>
+                                    <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="H7" name="H7" onclick="H7()"style="background-color:yellowgreen">H7</a></td>
                                 </tr>
                             </table>
                             <div style="margin-left: 10%; margin-right: 10%; ">
-                                <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                                <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
                             </div>
                             </center>
                             <br/><br/>
@@ -918,7 +971,7 @@
                     <center>
                         <table>
                             <tr>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: rgb(230, 217, 46);">Selected</a> </td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top" style="background-color: green;">Selected</a> </td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top" style="background-color:yellowgreen">Available</a></td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">Booked</a></td>
                             </tr>
@@ -929,19 +982,19 @@
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">&#160;I1</a></td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top" style="background-color:tomato">&#160;J1</a></td>
                                 <td>&#160;</td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K1</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="K1" name="K1" onclick="K1()"style="background-color:yellowgreen">K1</a></td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L1</a></td>
                             </tr>
                             <tr>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">&#160;I2</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top"style="background-color: rgb(230, 217, 46);">&#160;J2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="I2" name="I2" onclick="I2()"style="background-color: yellowgreen;">&#160;I2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="J2" name="J2" onclick="J2()"style="background-color: yellowgreen;">&#160;J2</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K2</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="K2" name="K2" onclick="K2()"style="background-color:yellowgreen">K2</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="L2" name="L2" onclick="L2()"style="background-color:yellowgreen">L2</a></td>
                             </tr>
                             <tr>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I3</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J3</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="J3" name="J3" onclick="J3()"style="background-color:yellowgreen">&#160;J3</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K3</a></td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L3</a></td>
@@ -951,32 +1004,32 @@
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;J4</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K4</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L4</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="L4" name="L4" onclick="L4()"style="background-color:yellowgreen">L4</a></td>
                             </tr>
                             <tr>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I5</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J5</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="J5" name="J5" onclick="J5()"style="background-color:yellowgreen">&#160;J5</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K5</a></td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">L5</a></td>
                             </tr>
                             <tr>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">&#160;I6</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J6</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="J6" name="J6" onclick="J6()"style="background-color:yellowgreen">&#160;J6</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
                                 <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top"style="background-color:tomato">K6</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L6</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="L6" name="L6" onclick="L6()"style="background-color:yellowgreen">L6</a></td>
                             </tr>
                             <tr>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;I7</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">&#160;J7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="I7" name="I7" onclick="I7()"style="background-color:yellowgreen">&#160;I7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="J7" name="J7" onclick="J7()"style="background-color:yellowgreen">&#160;J7</a></td>
                                 <td>&#160;&#160;&#160;&#160;</td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">K7</a></td>
-                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"style="background-color:yellowgreen">L7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="K7" name="K7" onclick="K7()"style="background-color:yellowgreen">K7</a></td>
+                                <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-top"id="L7" name="L7" onclick="L7()"style="background-color:yellowgreen">L7</a></td>
                             </tr>
                         </table>
                         <div style="margin-left: 10%; margin-right: 10%; ">
-                            <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                            <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn  ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
                         </div>
                         
                         <div data-role="popup" id="seatpopup3" data-theme="a" style="" class="ui-corner-all">
@@ -1015,7 +1068,7 @@
                             </table>
                             <br/>
                             <div style="margin-left: 10%; margin-right: 10%; ">
-                                <a href="#bookNowpayment1"  style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b">Continue</a>
+                                <a href="#bookNowpayment1"  style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn  ui-shadow-icon ui-btn-b">Continue</a>
                             </div>
                         </div>
                         </center>
@@ -1033,11 +1086,41 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                <td><li><a href="#bookinghome4" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome5" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome6" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
         </table>
+    
+        <div data-role="popup" id="bookinghome4" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNow">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome5" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNow">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome6" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNow">Cancel</a></button>
+            </div>
+        </div>
+
     </div><!-- /navbar -->
 
 </div>
@@ -1099,19 +1182,19 @@
     </div>
 
     <div style="margin-left: 10%; margin-right: 10%; margin-top: 50%;">
-        <a href="#discountpopup" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+        <a href="#discountpopup" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn  ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
     </div>
     
     <div data-role="popup" id="discountpopup" data-theme="a" class="ui-corner-all">
         <div class="onboardCloseButton">
-            <a href="#bookNowpayment2" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+            <a href="#bookNowpayment3" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
         </div>
         <br/>
         <h4>Wow!! You have 30% offer for one Ticket.</h4>
         <center><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-tag ui-btn-icon-left ui-btn-a" data-transition="pop" style="background-color: lawngreen;">Get 30% Off your ticket</a></center>
         <br/>
         <div  style="margin-left: 10%; margin-right: 10%; ">
-            <a href="#bookNowpayment2" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b" >Use Now</a>
+            <a href="#bookNowpayment2" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b" >Use Now</a>
         </div>
         <br/>
     </div>
@@ -1119,11 +1202,41 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                <td><li><a href="#bookinghome10" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome11" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome12" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
         </table>
+    
+        <div data-role="popup" id="bookinghome10" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment1">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome11" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment1">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome12" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment1">Cancel</a></button>
+            </div>
+        </div>
+
     </div><!-- /navbar -->
 
 </div>
@@ -1209,7 +1322,7 @@
                 </li>                
             </ul>
             <div style="margin-right: 10%; margin-left: 10%;">
-                <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-icon-shop ui-btn-icon-left ui-shadow-icon ui-btn-b">Process Payment</a>
+                <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Process Payment</a>
             </div>
             <br/> <br/>
 
@@ -1218,17 +1331,172 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome14" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome15" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
         </table>
+    
+        <div data-role="popup" id="bookinghome13" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome14" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome15" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+
     </div><!-- /navbar -->
 
 </div>
 <!-- /page -->
 
+<!-- Start of booking page -->
+<div data-role="page" id="bookNowpayment3">  
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose8" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
 
+    <div data-role="popup" id="confirmationtoclose8" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment1">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            
+        </div>
+    </div>
+
+    <div class="bookingHeader">
+        <h4>Book Now</h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:60%"></div>
+    </div>
+    <div>
+        <ul data-role="listview" data-inset="true">
+                <li>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Package Price</td>
+                        <td>:</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>% Off</td>
+                        <td>:</td>
+                        <td>%0</td>
+                    </tr>
+                </table>
+                <hr>
+                <table style="width: 100%;">
+                    <tr>
+                        <td><b>Discount</b></td>
+                        <td><b>:</b></td>
+                        <td><b>$0</b></td>
+                    </tr>
+                </table>
+                </li>                
+            </ul>
+        
+        
+        <ul data-role="listview" data-inset="true">
+                <li>
+                <h2>Package Details</h2>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Package Price</td>
+                        <td>:</td>
+                        <td>$600</td>
+                    </tr>
+                    <tr>
+                        <td>Discount</td>
+                        <td>:</td>
+                        <td>%0</td>
+                    </tr>
+                    
+                </table>
+                <hr>
+                <table style="width: 100%;">
+                    <tr>
+                        <td><b>Offer Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+                        <td><b>:</b></td>
+                        <td><b>$600</b></td>
+                    </tr>
+                </table>
+                </li>                
+            </ul>
+            <div style="margin-right: 10%; margin-left: 10%;">
+                <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Process Payment</a>
+            </div>
+            <br/> <br/>
+
+    </div>
+
+    <div data-role="navbar" class="footer">
+        <table width="100%">
+            <tr >
+                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome14" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                <td><li><a href="#bookinghome15" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
+            </tr>
+        </table>
+    
+        <div data-role="popup" id="bookinghome13" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+
+        <div data-role="popup" id="bookinghome14" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+        <div data-role="popup" id="bookinghome15" data-theme="a" style="" class="ui-corner-all">     
+            <div role="main" class="ui-content">
+                <center>
+                    <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                </center>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
+            </div>
+        </div>
+
+    </div><!-- /navbar -->
+
+</div>
+<!-- /page -->
 
 
 <!-- Start of payment page -->
@@ -1244,7 +1512,7 @@
                 <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
             </center>
             <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment2">Discart</a></button>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
             
         </div>
     </div>
@@ -1257,8 +1525,8 @@
     <div>
         <center>
             <a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-right">Visa</a>
-            <a href="#" class="ui-btn ui-btn-inline ">Master</a>
+            <a href="#" class="ui-btn ui-btn-inline" id="visa" name="visa" onclick="visa()">Visa</a>
+            <a href="#" class="ui-btn ui-btn-inline "id="master" name="master" onclick="master()">Master</a>
         </center>
     </div>
 
@@ -1278,7 +1546,7 @@
                 </div>
                 <div class="col-2" >
                     <input type="text"  required="required" placeholder="CVV">
-                    <i class="i-icon-payment i-icon-cvv2"></i>
+                    
                 </div>
             </div>
             <div class="last-row">
@@ -1296,21 +1564,26 @@
                     <label for="textinput-5">Email Address : *</label>
                     <input type="text" name="textinput-5" id="textinput-5" placeholder="This address will be used for bill details." value="" data-mini="true">
                     <center>
-                    <a href="#popupDialog" data-rel="popup" style="background-color: #1f069d;color: white;border-radius: 15px;" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-shop ui-btn-icon-left ui-btn-b">Pay Now</a>
+                        <br/>
+                    <div style="margin-left: 10%; margin-right: 10%; ">
+                        <a href="#popupDialog" data-rel="popup" style="background-color: #1f069d;color: white;border-radius: 15px;" data-position-to="window" data-transition="pop" class="ui-btn  ui-shadow-icon ui-btn-b">Pay Now</a>
+                    </div>
                     </center>
                 </div>
                 
                
                 
                 <div data-role="popup" id="popupDialog" data-overlay-theme="w" data-theme="w" data-dismissible="false" style="max-width:400px; background-color: whitesmoke;">
-                    <div data-role="header" data-theme="a">
+         <br/>
                     <h1>Confirmation</h1>
-                    </div>
+            
                     <div role="main" class="ui-content">
                         <center>
                             <h3 class="ui-title">Are you sure you want to pay On</h3>
                             <h2 class="ui-title">1795-1116-1010-7865</h2>
-                            <p>This action cannot be undone.</p>
+                        </center>
+                        <center>
+                            <p style="text-align: center;">This action cannot be undone.</p>
                         </center>
                         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;" data-rel="back">Cancel</a>
                         <a href="#payconfirmation" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;">Confirm</a>
@@ -1323,11 +1596,41 @@
         <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
-                    <td><li><a href="#bookingTicket" data-icon="location">Booking</a></li></td>
-                    <td><li><a href="#home" data-icon="home">Home</a></li></td>
-                    <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                    <td><li><a href="#bookinghome16" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                    <td><li><a href="#bookinghome17" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                    <td><li><a href="#bookinghome18" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
                 </tr>
             </table>
+        
+            <div data-role="popup" id="bookinghome16" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
+            <div data-role="popup" id="bookinghome17" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+            <div data-role="popup" id="bookinghome18" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
         </div><!-- /navbar -->
     </div>
 
@@ -1337,8 +1640,7 @@
 
 <!-- Start of payment confirmation -->
 <div data-role="page" id="payconfirmation">  
-    <h3>Booking Done</h3>
-    
+   
     <br/><br/><br/>
     <center>
         <img src="../Jquery/img/Vector.png">
@@ -1375,7 +1677,6 @@
 
 <!-- Start of payment confirmation -->
 <div data-role="page" id="profile">  
-    <h3>My Profile</h3>
     
   <!--  <div class="container" >
         <ul data-role="listview" data-inset="true">
@@ -1395,8 +1696,23 @@
    </div>
  -->
    <div style="margin-top: 5%;">
-        <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Menu..." data-inset="true">
-                <li><a href="#profileDetails">Profile</a></li>
+
+
+    <a href="#profileDetails" class="ui-bar ui-bar-a ui-corner-all">
+        <div style="margin-left: 5%; margin-bottom: 5%; margin-top: -3%;">
+            <img src="img/profilepic.png" width="20%" height="10%" ><br/>
+        </div>
+        <div style="margin-left: 35%; margin-top: -20%;">
+            <h3>Chavika Kodithuwakku</h3>
+            <br/>
+            <h2 style="font-size: 50%;">chavika.kodi@whale.com</h2>
+            <br/>
+            <h3 style="color: red;">Level 1.1</h3>
+        </div>
+    </a>
+
+
+        <ul data-role="listview"  data-inset="true">
                 <li><a href="#GeneralSetting">General Setting</a></li>
                 <li><a href="#youroffer">Your Offers</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -1405,7 +1721,38 @@
         </ul>
     </div>
 
-   
+   <br/><br/>
+   <div class="ui-bar ui-bar-a ui-corner-all">
+    <br/>
+        <p>Are you happy with us?</p> 
+        <br/>
+        <div style="margin-left: 5%; margin-bottom: 5%; margin-top: -3%;">
+            <img src="img/profilepic.png" width="20%" height="10%" ><br/>
+        </div>
+        <div style="margin-left: 35%; margin-top: -20%;">
+            <h3>Chavika Kodithuwakku</h3>
+            <div class='rating-stars text-center'>
+                <ul id='stars'>
+                  <li class='star' title='Poor' data-value='1'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Fair' data-value='2'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Good' data-value='3'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Excellent' data-value='4'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='WOW!!!' data-value='5'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                </ul>
+              </div>
+        </div>
+        <br/><br/><br/>
+    </div>
     
     
     <div data-role="navbar" class="footer">
@@ -1435,7 +1782,7 @@
                 <li><a href="#">
                 <center>
                     <div >
-                        <img src="img/profpic.jfif" width="30%" height="10%" ><br/>
+                        <img src="img/profilepic.png" width="20%" height="10%" ><br/>
                         <a href="#popupLogin" data-rel="popup" class=" ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-left ui-btn-b" data-transition="pop">Choose a creature...</a>
                     </div>
                 
@@ -1443,7 +1790,7 @@
                 <h2>chavikakodi@whale.com</h2>
                 <h2>Level 1.1</h2>
                 </center>
-            
+                
                 </li>                
         </ul>
    </div>
