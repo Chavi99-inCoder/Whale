@@ -205,10 +205,10 @@
             <input type="text" name="text-basic" id="text-basic" value="" placeholder="Search Location">
         </div>
         
-
-           <div id="map">
+        <div id="map">
             
-           </div>
+        </div>
+        <a href="#locationNva">Location</a>
            
            <div style="margin-left: 20%; margin-right: 20%;">
             <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">BOOKING</a></button>
@@ -219,7 +219,7 @@
         <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
-                    <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                    <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
                     <td><li><a href="#home" data-icon="home">Home</a></li></td>
                     <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
                 </tr>
@@ -228,6 +228,131 @@
 
     </div>
     <!-- /page -->
+
+
+    <!-- Start of Home page -->
+    <div data-role="page" id="locationNva">
+        <div class="bookingbackbutton">
+            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+        </div>
+    
+        <div class="bookingHeader">
+            <h4>Paris</h4>
+            <div class='rating-stars text-center' style="margin-left: -70%; margin-top: -6%;">
+                <ul id='stars' style="font-size: 40%;">
+                  <li class='star' title='Poor' data-value='1'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Fair' data-value='2'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Good' data-value='3'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Excellent' data-value='4'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='WOW!!!' data-value='5'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                </ul>
+              </div>
+        </div>
+           
+        <div style="margin-left: 60%; margin-top: -13%; margin-right: 5%;">
+            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+        </div>
+           
+        <div>
+            <img src="img/places/4.jpg" style="width: 100%; ">
+        </div>
+
+        <div style="margin-left: 5%; margin-bottom: 5%; margin-top: -1%;">
+            <img src="img/profilepic.png" width="20%" height="10%" style=" border-radius: 50%"><br/>
+        </div>
+        <div style="margin-left: 30%; margin-top: -27%;">
+            <h3>Chavika Kodithuwakku</h3>
+            <div class='rating-stars text-center'>
+                <ul id='stars' style="font-size: 70%;margin-left: -30%">
+                  <li class='star' title='Poor' data-value='1'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Fair' data-value='2'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Good' data-value='3'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='Excellent' data-value='4'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                  <li class='star' title='WOW!!!' data-value='5'>
+                    <i class='fa fa-star fa-fw'></i>
+                  </li>
+                </ul>
+              </div>
+        </div>
+
+        <div style="margin-top: 10%; margin-left: 10%; margin-right: 10%;background-color: beige; border-radius: 10%; ">
+            <row>
+                <br/>
+                <div class="col-1">
+                    <div style="margin-left:12; margin-bottom: 5%; margin-top: -1%;">
+                        <img src="img/profilepic.png" width="20%" height="10%" style=" border-radius: 50%"><br/>
+                    </div>
+                </div>
+                <div class="col-2" style="width: 100%; margin-top: -17%; margin-left: 20%;">
+                    <div>
+                        <h3>Kavindu Chamara</h3>
+                        <p style="margin-top: -4%;">Great Place</p>
+                    </div>
+                </div>
+            </row>
+            <br/>
+        </div>
+
+        <div style="margin-top: 2%; margin-left: 10%; margin-right: 10%;background-color: beige; border-radius: 10%; ">
+            <row>
+                <br/>
+                <div class="col-1">
+                    <div style="margin-left:12; margin-bottom: 5%; margin-top: -1%;">
+                        <img src="img/profilepic.png" width="20%" height="10%" style=" border-radius: 50%"><br/>
+                    </div>
+                </div>
+                <div class="col-2" style="width: 100%; margin-top: -17%; margin-left: 20%;">
+                    <div>
+                        <h3>Kusal Perera</h3>
+                        <p style="margin-top: -4%;">Very Clean place, kids friendly</p>
+                    </div>
+                </div>
+            </row>
+            <br/>
+        </div>
+        <div style="margin-top: -5; margin-right: 10%; margin-left: 10%;">
+            <form>
+                    <textarea name="textarea-1" id="textarea-1" placeholder="Add Review"></textarea>
+                <div style="margin-right: 10%; margin-left: 10%;">
+                    <a  style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Post Review</a>
+                </div>
+                </form>
+        </div>
+
+        <div data-role="navbar" class="footer">
+            <table width="100%">
+                <tr >
+                    <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
+                    <td><li><a href="#home" data-icon="home">Home</a></li></td>
+                    <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+                </tr>
+            </table>
+        </div><!-- /navbar -->
+
+    </div>
+    <!-- /page -->
+
+
+
+
 
     <!-- Start of profile page -->
     <div data-role="page" id="profile">
@@ -497,7 +622,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome1" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome1" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome2" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome3" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -508,7 +633,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookingTicket">Cancel</a></button>
             </div>
         </div>
@@ -760,7 +885,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome7" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome7" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome8" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome9" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -771,7 +896,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; height: 20%;" class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#checkAvailabilty">Cancel</a></button>
             </div>
         </div>
@@ -914,7 +1039,7 @@
                         </tr>
                     </table>
                     <div style="margin-left: 10%; margin-right: 10%; ">
-                        <a href="#seatpopup3" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn   ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
+                        <a href="#seatpopup3" onclick="validateTrack1()" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn   ui-shadow-icon ui-btn-b" data-transition="pop">Continue</a>
                     </div>
                     </center>
                   </div>
@@ -1057,33 +1182,35 @@
                             <br/>
                             <h3 style="color: darkgrey;">Ticket Details</h3>
                             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-                            <h3>1st Track</h3>
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td>Seat No : B3</td>
-                                    <td>OJY457A3</td>
-                                </tr>
-                                <tr>
-                                    <td>Seat No : a3</td>
-                                    <td>OJY457A3</td>
-                                </tr>
-                                <tr>
-                                    <td>Seat No : c3</td>
-                                    <td>OJY457A3</td>
-                                </tr>
-                            </table>
-                            <br/>
-                            <h3>2nd Track</h3>
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td>Seat No : B3</td>
-                                    <td>OJY457A3</td>
-                                </tr>
-                                <tr>
-                                    <td>Seat No : a3</td>
-                                    <td>OJY457A3</td>
-                                </tr>                                
-                            </table>
+                            <div style="margin-left: 10%;">
+                                <h3>1st Track</h3>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td>Seat No : B3</td>
+                                        <td>OJY457A3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seat No : a3</td>
+                                        <td>OJY457A3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seat No : c3</td>
+                                        <td>OJY457A3</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <h3>2nd Track</h3>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td>Seat No : B3</td>
+                                        <td>OJY457A3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seat No : a3</td>
+                                        <td>OJY457A3</td>
+                                    </tr>                                
+                                </table> 
+                            </div>
                             <br/>
                             <div style="margin-left: 10%; margin-right: 10%; ">
                                 <a href="#bookNowpayment1"  style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn  ui-shadow-icon ui-btn-b">Continue</a>
@@ -1104,7 +1231,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome4" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome4" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome5" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome6" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1115,7 +1242,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNow">Cancel</a></button>
             </div>
         </div>
@@ -1220,7 +1347,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome10" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome10" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome11" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome12" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1231,7 +1358,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment1">Cancel</a></button>
             </div>
         </div>
@@ -1349,7 +1476,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome14" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome15" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1360,7 +1487,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
             </div>
         </div>
@@ -1476,7 +1603,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                <td><li><a href="#bookinghome13" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
                 <td><li><a href="#bookinghome14" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                 <td><li><a href="#bookinghome15" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1487,7 +1614,7 @@
                 <center>
                     <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                 </center>
-                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                 <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#bookNowpayment2">Cancel</a></button>
             </div>
         </div>
@@ -1542,7 +1669,7 @@
     </div>
     <div>
         <center>
-            <a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
+            <a href="#addPaymentCard" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
             <a href="#" class="ui-btn ui-btn-inline" id="visa" name="visa" onclick="visa()">Visa</a>
             <a href="#" class="ui-btn ui-btn-inline "id="master" name="master" onclick="master()">Master</a>
         </center>
@@ -1604,7 +1731,7 @@
                             <p style="text-align: center;">This action cannot be undone.</p>
                         </center>
                         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;" data-rel="back">Cancel</a>
-                        <a href="#payconfirmation" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;">Confirm</a>
+                        <a href="#bookingSummary" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" style="background-color:#1f069d ;">Confirm</a>
                     </div>
                 </div>
         </div>
@@ -1614,7 +1741,7 @@
         <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
-                    <td><li><a href="#bookinghome16" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Booking</a></li></td>
+                    <td><li><a href="#bookinghome16" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Locations</a></li></td>
                     <td><li><a href="#bookinghome17" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
                     <td><li><a href="#bookinghome18" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
                 </tr>
@@ -1625,7 +1752,302 @@
                     <center>
                         <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
                     </center>
-                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookingTicket">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
+            <div data-role="popup" id="bookinghome17" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+            <div data-role="popup" id="bookinghome18" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
+        </div><!-- /navbar -->
+    </div>
+
+</div>
+<!-- /page -->
+
+<!-- Start of payment page -->
+<div data-role="page" id="bookingSummary">  
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose6" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
+
+    <div data-role="popup" id="confirmationtoclose6" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment2">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+            
+        </div>
+    </div>
+    <div class="bookingHeader">
+        <h4>Book Now </h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:90%"></div>
+    </div>
+    
+
+    <div>     
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <p style="color: darkgray;">Recepient Details</p>
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td>Recepient Name </td>
+                        <td style="text-align: right; color: #1f069d;">Chavika Kodithuwakku</td>
+                    </tr>
+                    <tr>
+                        <td>Contact Details </td>
+                        <td style="text-align: right; color: #1f069d;">Chavika.Kodi@gmail.com</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <p style="color: darkgray;">Booking Details</p>
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td>Order Date </td>
+                        <td style="text-align: right; color: #1f069d;">01/April/2021</td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Delivery </td>
+                        <td style="text-align: right; color: #1f069d;">11/April/2021</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <p style="color: darkgray;">1st Track</p>
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td style="color: #1f069d;"> <b> Seat No : B3 </b></td>
+                        <td style="text-align: right; color: black;">0JY468B2</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #1f069d;"> <b> Seat No : B4 </b></td>
+                        <td style="text-align: right; color: black;">0JY468B3</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #1f069d;"> <b> Seat No : B5 </b></td>
+                        <td style="text-align: right; color: black;">0JY468B5</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <p style="color: darkgray;">2nd Track</p>
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td style="color: #1f069d;"> <b> Seat No : B3 </b></td>
+                        <td style="text-align: right; color: black;">0JY468B2</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <p style="color: darkgray;">Package Details</p>
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td>Package Price </td>
+                        <td style="text-align: right; color: #1f069d;">$ 550</td>
+                    </tr>
+                    <P>4 Items</P>
+                    <tr>
+                        <td>Discount </td>
+                        <td style="text-align: right; color: #1f069d;">$ 45</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+        <hr>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <div>
+                <Table style="width: 100%;">
+                    <tr>
+                        <td>Total Price </td>
+                        <td style="text-align: right; color: #1f069d;">$ 505</td>
+                    </tr>
+                </Table>
+            </div>
+        </div>
+        
+        
+        <center>
+            <br/>
+            <div style="margin-left: 10%; margin-right: 10%; ">
+                <a href="#payconfirmation" style="background-color: #1f069d;color: white;border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b">Continue</a>
+            </div>
+        </center>
+        <br/>
+        <br/>
+        <div data-role="navbar" class="footer">
+            <table width="100%">
+                <tr >
+                    <td><li><a href="#bookinghome16" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
+                    <td><li><a href="#bookinghome17" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                    <td><li><a href="#bookinghome18" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
+                </tr>
+            </table>
+        
+            <div data-role="popup" id="bookinghome16" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
+            <div data-role="popup" id="bookinghome17" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#home">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+            <div data-role="popup" id="bookinghome18" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#profile">Discart</a></button>
+                    <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+                </div>
+            </div>
+    
+        </div><!-- /navbar -->
+    </div>
+
+</div>
+<!-- /page -->
+
+
+<!-- Start of payment page -->
+<div data-role="page" id="addPaymentCard">  
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#confirmationtoclose6" data-transition="pop" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
+
+    <div data-role="popup" id="confirmationtoclose6" data-theme="a" style="" class="ui-corner-all">     
+        <div role="main" class="ui-content">
+            <center>
+                <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+            </center>
+            <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#bookNowpayment2">Discart</a></button>
+            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
+            
+        </div>
+    </div>
+    <div class="bookingHeader">
+        <h4>Book Now </h4>
+    </div>
+    <div class="w3-border">
+        <div class="w3-blue" style="height:8px;width:90%"></div>
+    </div>
+    <div>
+        <center>
+            <a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add Card</a>
+            <a href="#" class="ui-btn ui-btn-inline" id="visa" name="visa" onclick="visa()">Visa</a>
+        </center>
+    </div>
+
+    <div>     
+        <div>
+            <p style="margin-right: 10%; margin-left: 10%;"><b>Add Credit / Debit Card</b></p>
+        </div>
+        <br/>
+         <div style="margin-right: 10%; margin-left: 10%;">
+            <label for="name">Card Holder Name:</label>
+            <input type="text"  value="" autocomplete="off">
+
+            <label for="name">Card Number:</label>
+            <input type="text"  value="" max="16" autocomplete="off">
+            <br/>
+            <p >Expire Date</p>
+            <div class="row" >
+                <div class="col-1"style="width: 100%;">
+                    <label for="name">Month:</label>
+                    <input type="text"required="required" >
+                </div>
+                <div class="col-2" style="width: 100%;">
+                    <label for="name">Year:</label>
+                    <input type="text"  required="required" >
+                    
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-1"style="width: 100%;">
+                    <label for="name">Security Code:</label>
+                    <input type="text"required="required" >
+                </div>
+                <div class="col-2" style="width: 100%; margin-left: 4%;">
+                    <br/>
+                    <a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-eye ui-btn-icon-notext">Delete</a>
+                </div>
+            </div>
+         </div>         
+                    
+         <div style="margin-right: 10%; margin-left: 10%;">
+            <a href="#processpayment" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Save</a>
+            <a href="#processpayment" style="background-color: white; color: white;border-radius: 15px; color: #1f069d; border-color: #1f069d;" class="ui-btn ui-shadow-icon ui-btn-b">Cancel</a>
+        </div>
+        
+
+        <br/>
+        <br/>
+        <div data-role="navbar" class="footer">
+            <table width="100%">
+                <tr >
+                    <td><li><a href="#bookinghome16" data-transition="pop" data-rel="popup" data-position-to="window"  data-icon="location">Location</a></li></td>
+                    <td><li><a href="#bookinghome17" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="home">Home</a></li></td>
+                    <td><li><a href="#bookinghome18" data-transition="pop" data-rel="popup" data-position-to="window" data-icon="user">Profile</a></li></td>
+                </tr>
+            </table>
+        
+            <div data-role="popup" id="bookinghome16" data-theme="a" style="" class="ui-corner-all">     
+                <div role="main" class="ui-content">
+                    <center>
+                        <h3 class="ui-title">Are you sure you want to Discard this Booking?</h3>
+                    </center>
+                    <button style="border-radius: 25px; border: 2px solid red; padding: 10px; " class="ui-btn"><a style="color: red;" href="#viewFavourit1">Discart</a></button>
                     <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Cancel</a></button>
                 </div>
             </div>
@@ -1767,7 +2189,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                <td><li><a href="#bookingTicket" data-icon=location">Location</a></li></td>
                 <td><li><a href="#home" data-icon="home">Home</a></li></td>
                 <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1787,6 +2209,104 @@
 
     <div class="bookingHeader">
         <h4>My Profile Details</h4>
+    </div>
+    
+    <div class="" >
+        <center>
+            <div>
+                <img src="img/profilepic.png" style=" border-radius: 50%" width="20%"  height="5%"><br/>
+                
+            </div>
+                
+            <div style="margin-top: -5%;">
+                <h2 style="font-size: 90%;">Chavika Kodithuwakku</h2>
+                <div style="margin-top: -4%;">
+                    <h2 style="font-size: 85%; color: red;">Level 1.1</h2>
+                </div>
+            </div>
+        </center>
+   </div>
+   <br/>
+
+   
+
+
+
+    <div data-role="popup" id="popupprofedit" data-theme="a" class="ui-corner-all">
+        <form style="margin-left: 10%; margin-right: 10%;">
+        <h2>Are you sure you want to Edit Your Details?</h2>
+            <div style="padding:10px 20px;">               
+                <button type="submit" style="background-color: white; color: #1f069d;border-radius: 15px; border-color: #1f069d;" class="ui-btn ui-shadow-icon ui-btn-b">Cancel</button>
+                <a type="submit" href="#editprofileDetails" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Yes</a>
+                
+            </div>
+        </form>
+    </div>
+
+    <div data-role="popup" id="popuplogout" data-theme="a" class="ui-corner-all">
+            <form style="margin-left: 10%; margin-right: 10%;">
+            <h2>Are you sure you want to Log Out?</h2>
+                <div style="padding:10px 20px;">               
+                    <button type="submit" style="background-color: white; color: #1f069d;border-radius: 15px; border-color: #1f069d;" class="ui-btn ui-shadow-icon ui-btn-b">Cancel</button>
+                    <a type="submit" href="#login" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Yes</a>
+                    
+                </div>
+            </form>
+        </div>
+    
+
+    
+
+    <div data-role="popup" id="popupPadded" class="ui-content">
+        <p>This is a popup with the <code>ui-content</code> class added to the popup container.</p>
+    </div>
+ 
+   <div>
+    <form>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <label for="text-basic">Username:</label>
+            <input type="text"  value="Chavika.kodi">
+            <label for="text-basic">Email:</label>
+            <input type="text" value="chavika.Kodithuwakku@whale.com">
+        </div>
+        <br/>
+        <div style="margin-left: 10%; margin-right: 10%;">
+            <a  style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b" href="#popupprofedit" data-rel="popup" data-transition="pop">Edit Details</a>
+            <br/>
+            <a href="#viewFavourit1" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">View Favourite</a>
+            <br/>
+            <a href="#" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">View Puzzle</a>
+            <br/>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#login">Log Out</a></button>
+        </div>
+    </form>
+   </div>
+
+   <br/><br/><br/><br/><br/><br/>
+    
+    <div data-role="navbar" class="footer">
+        <table width="100%">
+            <tr >
+                <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
+                <td><li><a href="#home" data-icon="home">Home</a></li></td>
+                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+            </tr>
+        </table>
+    </div><!-- /navbar -->
+    
+
+</div>
+<!-- /page -->
+
+<!-- Start of payment confirmation -->
+<div data-role="page" id="editprofileDetails">  
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#profileDetails" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
+
+    <div class="bookingHeader">
+        <h4>Edit Profile Details</h4>
     </div>
     
     <div class="" >
@@ -1817,8 +2337,7 @@
                 <button type="submit" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">Cancel</button>
             </div>
         </form>
-    </div>
-    
+    </div>   
 
     
 
@@ -1830,17 +2349,15 @@
     <form>
         <div style="margin-left: 10%; margin-right: 10%;">
             <label for="text-basic">Username:</label>
-            <input type="text" value="">
+            <input type="text"  value="Chavika.kodi">
             <label for="text-basic">Email:</label>
-            <input type="text" value="">
+            <input type="text" value="chavika.Kodithuwakku@whale.com">
         </div>
         <br/>
         <div style="margin-left: 10%; margin-right: 10%;">
-            <a href="#" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">View Favourite</a>
+            <a  style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b"  data-rel="popup" data-transition="pop">Save</a>
             <br/>
-            <a href="#" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">View Puzzle</a>
-            <br/>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#login">Log Out</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#profileDetails">Cancel</a></button>
         </div>
     </form>
    </div>
@@ -1850,7 +2367,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
                 <td><li><a href="#home" data-icon="home">Home</a></li></td>
                 <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1860,6 +2377,7 @@
 
 </div>
 <!-- /page -->
+
 
 
 <!-- Start of payment confirmation -->
@@ -1901,7 +2419,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
                 <td><li><a href="#home" data-icon="home">Home</a></li></td>
                 <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
             </tr>
@@ -1948,7 +2466,7 @@
     <div data-role="navbar" class="footer">
         <table width="100%">
             <tr >
-                <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
                 <td><li><a href="#home" data-icon="home">Home</a></li></td>
                 <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
             </tr>
@@ -2025,7 +2543,7 @@
         <div data-role="navbar" class="footer">
             <table width="100%">
                 <tr >
-                    <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                    <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
                     <td><li><a href="#home" data-icon="home">Home</a></li></td>
                     <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
                 </tr>
@@ -2102,8 +2620,242 @@
 </div>
     <!-- /page -->
 
+<!-- Start of General Setting -->
+<div data-role="page" id="viewFavourit1">  
+    <br/>
+    <div class="bookingbackbutton">
+        <a href="#profile" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext">Close</a>
+    </div>
 
-    <!-- Start of General Setting -->
+    <div class="bookingHeader">
+        <h4>Your Favourit Locations</h4>
+    </div>   
+
+    <div style="margin-left: 10%; margin-right: 10%; margin-top: -30%;">
+        <div style="margin-left: 10%; margin-right: 10%; margin-top: 50%;">
+            <a href="#emailfav" data-rel="popup" data-position-to="window" style="background-color: #1f069d; color: white; border-radius: 15px;" class="ui-btn  ui-shadow-icon ui-btn-b" data-transition="pop">Email the Favourie</a>
+        </div>
+        
+        <div data-role="popup" id="emailfav" data-theme="a" class="ui-corner-all">
+            <div class="onboardCloseButton">
+                <a href="#viewFavourit1" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+            </div>
+            <br/>
+            <h4 style="align-items: center;">Do you want to get E-mail to</h4>
+            <div style="margin-left: 10%; margin-right: 10%;">
+                <input type="text" name="name2" id="name2" value="" data-clear-btn="true">
+            </div>
+            <br/>
+            <div  style="margin-left: 10%; margin-right: 10%; ">
+                <a href="#successEmail" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b" >Send</a>
+            </div>
+            <br/>
+        </div>
+        <br/>
+       
+    </div>
+
+    
+
+    <div class="sortData" style="width: 40%;">
+        <div class="ui-field-contain" style="left:115%; margin-top: -10%;">
+                <select name="select-native-2" id="select-native-2" data-mini="true">
+                    <option value="1">Sort By &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="2">Sort By A to Z &nbsp;</option>
+                    <option value="3">Sort By Z to A &nbsp;</option>
+                </select>
+            </div>
+    </div>
+    <div data-role="collapsibleset" data-theme="a" data-content-theme="a" style="margin-top: -8%;">
+        <div data-role="collapsible">
+        <h2>Venice</h2>
+            <div>
+                <img src="img/places/7.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                        </td>
+                        <td style="text-align: right;">
+                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        
+        <div data-role="collapsible">
+        <h2>Paisa</h2>
+            <div>
+                <img src="img/places/6.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                        </td>
+                        <td style="text-align: right;">
+                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Santosa</h2>
+                <div>
+                    <img src="img/places/5.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            </td>
+                            <td style="text-align: right;">
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+         </div>
+
+        <div data-role="collapsible">
+            <h2>Paris</h2>
+                <div>
+                    <img src="img/places/4.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            </td>
+                            <td style="text-align: right;">
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2>City Of Ston</h2>
+                <div>
+                    <img src="img/places/3.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            </td>
+                            <td style="text-align: right;">
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Basilona</h2>
+                <div>
+                    <img src="img/places/2.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            </td>
+                            <td style="text-align: right;">
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Madnride</h2>
+                <div>
+                    <img src="img/places/8.jpg" style="margin-right: 10%; margin-right: 10%; width: 100%; ">
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            </td>
+                            <td style="text-align: right;">
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+
+    </div>
+    
+    <div data-role="navbar" class="footer">
+        <table width="100%">
+            <tr >
+                <td><li><a href="#viewFavourit1" data-icon="location">Location</a></li></td>
+                <td><li><a href="#home" data-icon="home">Home</a></li></td>
+                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+            </tr>
+        </table>
+    </div><!-- /navbar -->
+    
+</div>
+<!-- /page -->
+
+<!-- Start of payment confirmation -->
+<div data-role="page" id="successEmail">  
+   
+    <br/><br/><br/>
+    <center>
+        <img src="../Jquery/img/Vector.png">
+        <h2 style="color:00CC6A;">Email was Succeffully Sent!</h2>
+
+        <h4>We wish you will enjoy every moment with us...</h4>
+
+        <br/><br/><br/>
+
+        <h4>Thank you</h4>
+
+        <div style="margin-right: 10%; margin-left: 10%;">
+            <a href="#home" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn  ui-btn-b">Back to Home</a>
+        </div>
+    </center>
+    
+    <div data-role="navbar" class="footer">
+        <table width="100%">
+            <tr >
+                <td><li><a href="#bookingTicket" data-icon="location">Location</a></li></td>
+                <td><li><a href="#home" data-icon="home">Home</a></li></td>
+                <td><li><a href="#profile" data-icon="user">Profile</a></li></td>
+            </tr>
+        </table>
+    </div><!-- /navbar -->
+
+</div>
+<!-- /page -->
+
+
+<!-- Start of General Setting -->
 <div data-role="page" id="faq">  
     <br/>
     <div class="bookingbackbutton">
@@ -2114,13 +2866,41 @@
         <h4>Frequantly Asked Questions</h4>
     </div>
         
-    <ul data-role="listview" data-inset="true">
-        <li><a href="#">Hear is your FAQ #1</a></li>
-        <li><a href="#">Hear is your FAQ #2</a></li>
-        <li><a href="#">Hear is your FAQ #3</a></li>
-        <li><a href="#">Hear is your FAQ #4</a></li>
-        <li><a href="#">Hear is your FAQ #5</a></li>
-    </ul>
+    <div data-role="collapsibleset" data-theme="a" data-inset="false" style="margin-right: 10%; margin-left: 10%;">
+            <div data-role="collapsible">
+            <h2>Here Is your FAQ #1</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+
+            <div data-role="collapsible">
+            <h2>Here Is your FAQ #2</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+
+            <div data-role="collapsible">
+            <h2>Here Is your FAQ #3</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+             <div data-role="collapsible">
+            <h2>Here Is your FAQ #4</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+            <div data-role="collapsible">
+            <h2>Here Is your FAQ #5</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+            <div data-role="collapsible">
+            <h2>Here Is your FAQ #6</h2>
+                <h3>What the best place to visit in germany?</h3>
+                <h3 style="font-size: 80%;">This is quite enough long answer to the frequeantly asked question. Do not copy and paste from</h3>
+            </div>
+
+    </div>
     
         <div data-role="navbar" class="footer">
             <table width="100%">
@@ -2133,7 +2913,7 @@
         </div><!-- /navbar -->
     
 </div>
-    <!-- /page -->
+<!-- /page -->
 
 
 

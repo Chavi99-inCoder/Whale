@@ -1,3 +1,10 @@
+
+function validateTrack1()
+{
+    
+}
+
+
 function A2(){
     myDivObj = document.getElementById("A2")
     let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
