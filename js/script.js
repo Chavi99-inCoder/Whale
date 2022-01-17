@@ -153,3 +153,82 @@ $( document ).on( "pagecreate", "#map-page", function() {
             window.location.href = "#home";
         }
     }
+
+    function removeFav1()
+    {
+        document.getElementById('removeFav1').style.display ='none';
+    }
+
+    function removeFav2()
+    {
+        document.getElementById('removeFav2').style.display ='none';
+
+    }
+
+    function removeFav3()
+    {
+        document.getElementById('removeFav3').style.display ='none';
+    }
+
+    function removeFav4()
+    {
+        document.getElementById('removeFav4').style.display ='none';
+    }
+
+    function removeFav5()
+    {
+        document.getElementById('removeFav5').style.display ='none';
+    }
+
+    function removeFav6()
+    {
+        document.getElementById('removeFav6').style.display ='none';
+    }
+
+    function removeFav7()
+    {
+        document.getElementById('removeFav7').style.display ='none';
+    }
+
+
+    function AddRemove1()
+    {
+        document.getElementById('btnremoveFav2').style.display ='none';
+        document.getElementById('btnremoveFavx').style.display ='block';
+    }
+
+    function AddRemove2()
+    {
+        document.getElementById('btnAddRemove2').style.display ='none';
+        document.getElementById('btnAddRemove2x').style.display ='block';
+    }
+
+    function AddRemove3()
+    {
+        document.getElementById('btnAddRemove3').style.display ='none';
+        document.getElementById('btnAddRemove3x').style.display ='block';
+    }
+
+    function AddRemove4()
+    {
+        document.getElementById('btnAddRemove4').style.display ='none';
+        document.getElementById('btnAddRemove4x').style.display ='block';
+    }
+
+    function AddRemove5()
+    {
+        document.getElementById('btnAddRemove5').style.display ='none';
+        document.getElementById('btnAddRemove5x').style.display ='block';
+    }
+
+    function AddRemove6()
+    {
+        document.getElementById('btnAddRemove6').style.display ='none';
+        document.getElementById('btnAddRemove6x').style.display ='block';
+    }
+
+    function AddRemove7()
+    {
+        document.getElementById('btnAddRemove7').style.display ='none';
+        document.getElementById('btnAddRemove7x').style.display ='block';
+    }
