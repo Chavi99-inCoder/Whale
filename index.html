@@ -18,33 +18,7 @@
 </script>
 
 <script>    
-    function locationvalidate(){
-        var location = document.getElementsByName("loc")[0].value;
-        var desination = document.getElementsByName("dec")[0].value;
-
-        if(location == null || location == '' || desination == null || desination == '')
-        {
-            window.location.href = "#errorpopup";
-        }
-        else
-        {
-            window.location.href = "#checkAvailabilty";
-        }
-    }
-
-    function loginvalidate(){
-        var username = document.getElementsByName("username")[0].value;
-        var password = document.getElementsByName("password")[0].value;
-
-        if(username == null || username == '' || password == null || password == '')
-        {
-            window.location.href = "#errorlogin";
-        }
-        else
-        {
-            window.location.href = "#home";
-        }
-    }
+    
 </script>
 </head>
 <body>
@@ -686,19 +660,24 @@
         <tr>
             <td>
                 <label for="date">Start Date:</label>
-                <input type="date" name="date" id="date" value="">
+                <input type="date" name="sdate" id="sdate" value="">
             </td>
             <td>
                 <label for="date">End Date:</label>
-                <input type="date" name="date" id="date" value="">
+                <input type="date" name="edate" id="edate" value="">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button style="background-color: #1f069d;" class="ui-btn" onclick="sortbydate()"> <a font-weight: 300; style="color: white;" >Sort By Date</a></button>
             </td>
         </tr>
     </table>
 
-    <div>
+    <div style="display:none" id="downtowntoberlin">
 
         <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
-            <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+            <li data-role="list-divider">Friday, February 1, 2022 <span class="ui-li-count">3</span></li>
             <li style="margin-top: 4%;">
                 <div style="margin-top: -5%;">
                     <a href="#bookNow">
@@ -719,7 +698,7 @@
                                     <tr>
                                         <td>Down Town</td>
                                         <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                        <td style="text-align: right;">Glastonbury Abbey</td>
+                                        <td style="text-align: right;">Berlin</td>
                                     </tr>
                                 </table>
                                 <br/>
@@ -749,7 +728,7 @@
                                         <tr>
                                             <td>Down Town</td>
                                             <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                            <td style="text-align: right;">Berlin</td>
                                         </tr>
                                     </table>
                                     <br/><br/>
@@ -778,7 +757,7 @@
                                         <tr>
                                             <td>Down Town</td>
                                             <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                            <td style="text-align: right;">Berlin</td>
                                         </tr>
                                     </table>
                                     <br/>
@@ -788,7 +767,7 @@
                 </li>
 
 
-                <li data-role="list-divider">Friday, October 9, 2021 <span class="ui-li-count">3</span></li>
+                <li data-role="list-divider">Saturday, February 2, 2022 <span class="ui-li-count">3</span></li>
 
                 <li style="margin-top: 2%;">
                     <div style="margin-top: -5%;">
@@ -810,7 +789,7 @@
                                         <tr>
                                             <td>Down Town</td>
                                             <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                            <td style="text-align: right;">Berlin</td>
                                         </tr>
                                     </table>
                                     <br/>
@@ -839,7 +818,7 @@
                                         <tr>
                                             <td>Down Town</td>
                                             <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                            <td style="text-align: right;">Berlin</td>
                                         </tr>
                                     </table>
                                     <br/>
@@ -869,7 +848,7 @@
                                         <tr>
                                             <td>Down Town</td>
                                             <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
-                                            <td style="text-align: right;">Glastonbury Abbey</td>
+                                            <td style="text-align: right;">Berlin</td>
                                         </tr>
                                     </table>
                                     <br/>
@@ -879,6 +858,971 @@
                 </li>
             </ul>
             <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="downtowntoberlin1">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Friday, February 1, 2022 <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="#bookNow">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Down Town</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Berlin</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 225</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0SS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Berlin</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 129</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>8:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Berlin</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="downtowntoberlin2">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+                <li data-role="list-divider">Saturday, February 2, 2022 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Berlin</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 110</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDDJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>10:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Berlin</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 100</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : DVJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>11:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Down Town</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Berlin</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="berlintoparis">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Thursday, February 3, 2022  <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="#bookNow">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Berlin</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Paris</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 225</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0SS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 129</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>8:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                <li data-role="list-divider">Friday, February 4, 2022 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 110</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDDJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>10:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 100</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : DVJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>11:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="berlintoparis1">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Thursday, February 3, 2022  <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="#bookNow">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Berlin</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Paris</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 225</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0SS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 129</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>8:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                
+        </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="berlintoparis2">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+                <li data-role="list-divider">Friday, February 4, 2022 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 110</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDDJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>10:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 100</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : DVJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>11:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Berlin</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="praguetoparis">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Saturday, February 5, 2022 <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="#bookNow">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Prague</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Paris</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 225</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0SS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 129</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>8:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                <li data-role="list-divider">Saturday, February 6, 2022 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 110</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDDJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>10:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 100</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : DVJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>11:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="praguetoparis1">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <li data-role="list-divider">Saturday, February 5, 2022 <span class="ui-li-count">3</span></li>
+            <li style="margin-top: 4%;">
+                <div style="margin-top: -5%;">
+                    <a href="#bookNow">
+                        <table width="100%">
+                            <tr>
+                                <td><b>Princess Abbey :</b></td>
+                                <td style="text-align: right;">$ 250</td>
+                            </tr>
+                        </table>
+                        <h6 style="margin-top: 2%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                        <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                            <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                        </div>
+                        <hr>
+                            <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                        <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>Prague</td>
+                                        <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                        <td style="text-align: right;">Paris</td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </div>
+                    </a>
+                </div>
+            </li>
+                 
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 225</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0SS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>4:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 129</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDS76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>8:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="praguetoparis2">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+                <li data-role="list-divider">Saturday, February 6, 2022 <span class="ui-li-count">3</span></li>
+
+                <li style="margin-top: 2%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Ice Train :</b></td>
+                                    <td style="text-align: right;">$ 250</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : 0VJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 110</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : SDDJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>10:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                 <li style="margin-top: -5%;">
+                    <div style="margin-top: -5%;">
+                        <a href="#bookNow">
+                            <table width="100%">
+                                <tr>
+                                    <td><b>Princess Abbey :</b></td>
+                                    <td style="text-align: right;">$ 100</td>
+                                </tr>
+                            </table>
+                            <h6 style="margin-top: -4%;  color: slategray;">Ticket Code : DVJ76</h6>
+                            <div style="margin-left: 60%; margin-top: -7%; margin-right: 5%;">
+                                <button style="background-color: blueviolet;" class="ui-btn"> <a font-weight: 300; style="color: white;" href="#bookNow">Book Now</a></button>
+                            </div>
+                            <hr>
+                                <p class="ui-li-aside"><strong>11:24</strong>PM</p>
+                            <div style="margin-top: -5%; margin-bottom: -10%; margin-left: 5%;margin-right: 5%;">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>Prague</td>
+                                            <td style="text-align: right;"><b style="color: blueviolet;"> TO </b></td>
+                                            <td style="text-align: right;">Paris</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <br/><br/>
+        
+    </div>
+
+    <div style="display:none" id="notrain">
+
+        <ul data-role="listview" data-theme="a" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search..." data-inset="true">
+            <h2><center>No Trains Available for Given Locations</center></h2>
+        </ul>
+        <br/><br/>
         
     </div>
 
@@ -2264,10 +3208,10 @@
    <div>
     <form>
         <div style="margin-left: 10%; margin-right: 10%;">
-            <label for="text-basic">Username:</label>
-            <input type="text"  value="Chavika.kodi">
-            <label for="text-basic">Email:</label>
-            <input type="text" value="chavika.Kodithuwakku@whale.com">
+            <label for="text-basic"><b>Username:</b></label>
+            <label for="text-10" style="margin-left: 4%;">Chavika.kodi</label>
+            <label for="text-basic"><b>Email:</b></label>
+            <label for="text-10" style="margin-left: 4%;">chavika.Kodithuwakku@whale.com</label>
         </div>
         <br/>
         <div style="margin-left: 10%; margin-right: 10%;">
@@ -2277,7 +3221,7 @@
             <br/>
             <a href="#" style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b">View Puzzle</a>
             <br/>
-            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#login">Log Out</a></button>
+            <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a href="#popuplogout" data-rel="popup" data-transition="pop"  style="color: #1f069d;;" >Log Out</a></button>
         </div>
     </form>
    </div>
@@ -2313,7 +3257,8 @@
         <center>
             <div>
                 <img src="img/profilepic.png" style=" border-radius: 50%" width="20%"  height="5%"><br/>
-                <a href="#popupLogin" data-rel="popup" class=" ui-corner-all ui-shadow ui-btn-b" data-transition="pop">Upload...</a>
+                
+                <a href="#popupLogin" data-rel="popup" class=" ui-corner-all ui-shadow ui-btn-b" data-transition="pop"><img src="img/upload.png" width="5%"  height="1%" href="#popupLogin" data-rel="popup" class=" ui-corner-all ui-shadow ui-btn-b" data-transition="pop"></a>
             </div>
                 
             <div style="margin-top: -5%;">
@@ -2355,7 +3300,7 @@
         </div>
         <br/>
         <div style="margin-left: 10%; margin-right: 10%;">
-            <a  style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b"  data-rel="popup" data-transition="pop">Save</a>
+            <a  style="background-color: #1f069d; color: white;border-radius: 15px;" class="ui-btn ui-shadow-icon ui-btn-b"  href="#profileDetails">Save</a>
             <br/>
             <button style="border-radius: 25px; border: 2px solid #1f069d; padding: 10px;" class="ui-btn"><a style="color: #1f069d;;" href="#profileDetails">Cancel</a></button>
         </div>
@@ -2643,7 +3588,8 @@
             <br/>
             <h4 style="align-items: center;">Do you want to get E-mail to</h4>
             <div style="margin-left: 10%; margin-right: 10%;">
-                <input type="text" name="name2" id="name2" value="" data-clear-btn="true">
+                <input type="text" name="senemailad" id="senemailad" value="" onkeypress="sendEmailValidation()" data-clear-btn="true">
+                <label for="html" id="emailer" name="emailer" ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label>
             </div>
             <br/>
             <div  style="margin-left: 10%; margin-right: 10%; ">
@@ -2676,10 +3622,10 @@
                 <table>
                     <tr>
                         <td>
-                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                         </td>
                         <td style="text-align: right;">
-                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                         </td>
                     </tr>
                 </table>
@@ -2696,10 +3642,10 @@
                 <table>
                     <tr>
                         <td>
-                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                            <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                         </td>
                         <td style="text-align: right;">
-                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                            <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                         </td>
                     </tr>
                 </table>
@@ -2716,10 +3662,10 @@
                     <table>
                         <tr>
                             <td>
-                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                             </td>
                             <td style="text-align: right;">
-                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                             </td>
                         </tr>
                     </table>
@@ -2736,10 +3682,10 @@
                     <table>
                         <tr>
                             <td>
-                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                             </td>
                             <td style="text-align: right;">
-                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                             </td>
                         </tr>
                     </table>
@@ -2756,10 +3702,10 @@
                     <table>
                         <tr>
                             <td>
-                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                             </td>
                             <td style="text-align: right;">
-                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;">Remove From Favourite</a></button>
                             </td>
                         </tr>
                     </table>
@@ -2776,10 +3722,10 @@
                     <table>
                         <tr>
                             <td>
-                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                             </td>
                             <td style="text-align: right;">
-                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                             </td>
                         </tr>
                     </table>
@@ -2796,10 +3742,10 @@
                     <table>
                         <tr>
                             <td>
-                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">View More</a></button>
+                                <button style="border-radius: 25px; border: 2px solid white; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#locationNva">View More</a></button>
                             </td>
                             <td style="text-align: right;">
-                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" href="#processpayment">Remove From Favourite</a></button>
+                                <button style="border-radius: 25px; border: 2px solid #06599d; padding: 10px; " class="ui-btn"><a style="color: #1f069d;" >Remove From Favourite</a></button>
                             </td>
                         </tr>
                     </table>

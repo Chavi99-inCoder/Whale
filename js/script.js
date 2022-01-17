@@ -32,3 +32,124 @@ $( document ).on( "pagecreate", "#map-page", function() {
             });
         }
     });
+
+    function sendEmailValidation(){
+        var x = document.getElementsByName("senemailad")[0].value
+
+        var vali = validateEmail(x);
+
+
+        if(vali)
+        {
+            document.getElementById('emailer').style.visibility = "hidden";
+        }
+        else{
+            document.getElementById('emailer').style.visibility = "visible";
+        }
+
+    }
+
+    function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+
+    function locationvalidate(){
+        var location = document.getElementsByName("loc")[0].value;
+        var desination = document.getElementsByName("dec")[0].value;
+
+        if(location == null || location == '' || desination == null || desination == '')
+        {
+            window.location.href = "#errorpopup";
+        }
+        else
+        {
+            window.location.href = "#checkAvailabilty";
+        }
+
+        document.getElementById('downtowntoberlin').style.display ='none';
+        document.getElementById('berlintoparis').style.display ='none';
+        document.getElementById('praguetoparis').style.display ='none';
+        document.getElementById('notrain').style.display ='none';
+
+        if(location == "Down Town" && desination == "Berlin")
+        {
+            document.getElementById('downtowntoberlin').style.display ='block';
+        }
+        else if(location == "Berlin" && desination == "Paris")
+        {
+            document.getElementById('berlintoparis').style.display ='block';
+        }
+        else if(location == "Prague" && desination == "Paris")
+        {
+            document.getElementById('praguetoparis').style.display ='block';
+        }
+        else
+        {
+            document.getElementById('notrain').style.display ='block';
+        }
+
+        
+    }
+
+    function sortbydate()
+    {
+        var location = document.getElementsByName("loc")[0].value;
+        var desination = document.getElementsByName("dec")[0].value;
+        var edate = document.getElementsByName("edate")[0].value;
+
+        document.getElementById('downtowntoberlin').style.display ='none';
+        document.getElementById('downtowntoberlin1').style.display ='none';
+        document.getElementById('downtowntoberlin2').style.display ='none';
+        document.getElementById('berlintoparis').style.display ='none';
+        document.getElementById('berlintoparis1').style.display ='none';
+        document.getElementById('berlintoparis2').style.display ='none';
+        document.getElementById('praguetoparis').style.display ='none';
+        document.getElementById('praguetoparis1').style.display ='none';
+        document.getElementById('praguetoparis2').style.display ='none';
+
+
+        if(location =="Down Town" && desination == "Berlin" && edate == "2022-02-01")
+        {
+            document.getElementById('downtowntoberlin1').style.display ='block';
+        }
+        else if(location =="Down Town" && desination == "Berlin" && edate == "2022-02-02")
+        {
+            document.getElementById('downtowntoberlin2').style.display ='block';
+        }
+        else if(location =="Berlin" && desination == "Paris" && edate == "2022-02-03")
+        {
+            document.getElementById('berlintoparis1').style.display ='block';
+        }
+        else if(location =="Berlin" && desination == "Paris" && edate == "2022-02-04")
+        {
+            document.getElementById('berlintoparis2').style.display ='block';
+        }
+        else if(location =="Prague" && desination == "Paris" && edate == "2022-02-05")
+        {
+            document.getElementById('praguetoparis1').style.display ='block';
+        }
+        else if(location =="Prague" && desination == "Paris" && edate == "2022-02-06")
+        {
+            document.getElementById('praguetoparis2').style.display ='block';
+        }else{
+            document.getElementById('notrain').style.display ='block';
+        }
+        
+    }
+
+    function loginvalidate(){
+        var username = document.getElementsByName("username")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+
+        if(username == null || username == '' || password == null || password == '')
+        {
+            window.location.href = "#errorlogin";
+        }
+        else
+        {
+            window.location.href = "#home";
+        }
+    }
