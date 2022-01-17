@@ -4,7 +4,6 @@ function validateTrack1()
     
 }
 
-
 function A2(){
     myDivObj = document.getElementById("A2")
     let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
@@ -12,8 +11,12 @@ function A2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("A2").style.backgroundColor='green';
+        document.getElementById('c1bill3').style.display ='block';
+        document.getElementById('c1bill4').style.display ='block';
     }else{
         document.getElementById("A2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill3').style.display ='none';
+        document.getElementById('c1bill4').style.display ='none';
     }
 }
 function B2(){
@@ -23,19 +26,12 @@ function B2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("B2").style.backgroundColor='green';
+        document.getElementById('c1bill5').style.display ='block';
+        document.getElementById('c1bill6').style.display ='block';
     }else{
         document.getElementById("B2").style.backgroundColor='yellowgreen';
-    }
-}
-function c1(){
-    myDivObj = document.getElementById("c1")
-    let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
-
-    if(myDivObjBgColor == 'rgb(154, 205, 50)')
-    {
-        document.getElementById("c1").style.backgroundColor='green';
-    }else{
-        document.getElementById("c1").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill5').style.display ='none';
+        document.getElementById('c1bill6').style.display ='none';
     }
 }
 
@@ -46,8 +42,12 @@ function c1(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("c1").style.backgroundColor='green';
+        document.getElementById('c1bill1').style.display ='block';
+        document.getElementById('c1bill2').style.display ='block';
     }else{
         document.getElementById("c1").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill1').style.display ='none';
+        document.getElementById('c1bill2').style.display ='none';
     }
 }
 
@@ -58,8 +58,12 @@ function C2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("C2").style.backgroundColor='green';
+        document.getElementById('c1bill7').style.display ='block';
+        document.getElementById('c1bill8').style.display ='block';
     }else{
         document.getElementById("C2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill7').style.display ='none';
+        document.getElementById('c1bill8').style.display ='none';
     }
 }
 function D2(){
@@ -69,8 +73,12 @@ function D2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("D2").style.backgroundColor='green';
+        document.getElementById('c1bill9').style.display ='block';
+        document.getElementById('c1bill10').style.display ='block';
     }else{
         document.getElementById("D2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill9').style.display ='none';
+        document.getElementById('c1bill10').style.display ='none';
     }
 }
 function B3(){
@@ -80,8 +88,12 @@ function B3(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("B3").style.backgroundColor='green';
+        document.getElementById('c1bill11').style.display ='block';
+        document.getElementById('c1bill12').style.display ='block';
     }else{
         document.getElementById("B3").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill11').style.display ='none';
+        document.getElementById('c1bill12').style.display ='none';
     }
 }
 function D4(){
@@ -91,8 +103,12 @@ function D4(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("D4").style.backgroundColor='green';
+        document.getElementById('c1bill13').style.display ='block';
+        document.getElementById('c1bill14').style.display ='block';
     }else{
         document.getElementById("D4").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill13').style.display ='none';
+        document.getElementById('c1bill14').style.display ='none';
     }
 }
 function B5(){

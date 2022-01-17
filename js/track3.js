@@ -89,8 +89,12 @@ function L4(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("L4").style.backgroundColor='green';
+        document.getElementById('c1bill41').style.display ='block';
+        document.getElementById('c1bill42').style.display ='block';
     }else{
         document.getElementById("L4").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill41').style.display ='none';
+        document.getElementById('c1bill42').style.display ='none';
     }
 }
 
@@ -101,8 +105,12 @@ function J3(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("J3").style.backgroundColor='green';
+        document.getElementById('c1bill39').style.display ='block';
+        document.getElementById('c1bill40').style.display ='block';
     }else{
         document.getElementById("J3").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill39').style.display ='none';
+        document.getElementById('c1bill40').style.display ='none';
     }
 }
 
@@ -113,8 +121,12 @@ function K2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("K2").style.backgroundColor='green';
+        document.getElementById('c1bill35').style.display ='block';
+        document.getElementById('c1bill36').style.display ='block';
     }else{
         document.getElementById("K2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill35').style.display ='none';
+        document.getElementById('c1bill36').style.display ='none';
     }
 }
 
@@ -125,8 +137,12 @@ function L2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("L2").style.backgroundColor='green';
+        document.getElementById('c1bill37').style.display ='block';
+        document.getElementById('c1bill38').style.display ='block';
     }else{
         document.getElementById("L2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill37').style.display ='none';
+        document.getElementById('c1bill38').style.display ='none';
     }
 }
 
@@ -137,8 +153,13 @@ function J2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("J2").style.backgroundColor='green';
+        document.getElementById('c1bill33').style.display ='block';
+        document.getElementById('c1bill34').style.display ='block';
+        
     }else{
         document.getElementById("J2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill33').style.display ='none';
+        document.getElementById('c1bill34').style.display ='none';
     }
 }
 
@@ -149,8 +170,12 @@ function I2(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("I2").style.backgroundColor='green';
+        document.getElementById('c1bill31').style.display ='block';
+        document.getElementById('c1bill32').style.display ='block';
     }else{
         document.getElementById("I2").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill31').style.display ='none';
+        document.getElementById('c1bill32').style.display ='none';
     }
 }
 
@@ -161,7 +186,11 @@ function K1(){
     if(myDivObjBgColor == 'rgb(154, 205, 50)')
     {
         document.getElementById("K1").style.backgroundColor='green';
+        document.getElementById('c1bill29').style.display ='block';
+        document.getElementById('c1bill30').style.display ='block';
     }else{
         document.getElementById("K1").style.backgroundColor='yellowgreen';
+        document.getElementById('c1bill29').style.display ='none';
+        document.getElementById('c1bill30').style.display ='none';
     }
 }
