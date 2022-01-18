@@ -34,17 +34,18 @@ $( document ).on( "pagecreate", "#map-page", function() {
     });
 
     function sendEmailValidation(){
-        var x = document.getElementsByName("senemailad")[0].value
-
-        var vali = validateEmail(x);
-
+        var data = document.getElementsByName("sendemailid")[0].value;
+        var vali = validateEmail(data);
 
         if(vali)
         {
-            document.getElementById('emailer').style.visibility = "hidden";
+            document.getElementById('btnsendemail').style.display ='block';
+            document.getElementById('emailertext').style.display = "none";
         }
         else{
-            document.getElementById('emailer').style.visibility = "visible";
+
+            document.getElementById('btnsendemail').style.display ='none';
+            document.getElementById('emailertext').style.display = "block";
         }
 
     }

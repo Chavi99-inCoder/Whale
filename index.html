@@ -353,13 +353,14 @@
         
         <div data-role="popup" id="emailfav" data-theme="a" class="ui-corner-all">
             <div class="onboardCloseButton">
-                <a href="#viewFavourit1" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+                <a href="#viewFavouritadd" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
             </div>
             <br/>
             <h4 style="align-items: center;">Do you want to get E-mail to</h4>
             <div style="margin-left: 5%; margin-right: 5%;">
                 <input type="text" name="senemailad" id="senemailad" value="" onkeypress="sendEmailValidation()" data-clear-btn="true">
-                <label for="html" id="emailer" name="emailer" ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label>
+                <div for="html" id="emailer" name="emailer" >
+                    <label for="html"  ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label></div>
             </div>
             <br/>
             <div  style="margin-left: 10%; margin-right: 10%; ">
@@ -367,6 +368,24 @@
             </div>
             <br/>
         </div>
+        <!-- <div data-role="popup" id="emailfav1" data-theme="a" class="ui-corner-all">
+            <div class="onboardCloseButton">
+                <a href="#viewFavouritadd" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext">Close</a>
+            </div>
+            <br/>
+            <h4 style="align-items: center;">Do you want to get E-mail to</h4>
+            <div style="margin-left: 5%; margin-right: 5%;">
+                <input type="text" id="sendemailid" name="sendemailid" value="" onkeypress="sendEmailValidation()" data-clear-btn="true">
+                <div style="display: block" id="emailertext" name="emailertext">
+                    <label for="html"  ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label>
+                </div>
+            </div>
+            <br/>
+            <div  style="display: none;margin-left: 10%; margin-right: 10%; " id="btnsendemail">
+                <a href="#successEmail" style=" background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b" >Send</a>
+            </div>
+            <br/>
+        </div> -->
         <br/>
        
     </div>
@@ -5085,12 +5104,14 @@
             <br/>
             <h4 style="align-items: center;">Do you want to get E-mail to</h4>
             <div style="margin-left: 5%; margin-right: 5%;">
-                <input type="text" name="senemailad" id="senemailad" value="" onkeypress="sendEmailValidation()" data-clear-btn="true">
-                <label for="html" id="emailer" name="emailer" ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label>
+                <input type="text" id="sendemailid" name="sendemailid" value="" onkeypress="sendEmailValidation()" data-clear-btn="true">
+                <div style="display: block" id="emailertext" name="emailertext">
+                    <label for="html"  ><h2 style="color: red; font-size: 80%;">Enter a valid Email ID</h2></label>
+                </div>
             </div>
             <br/>
-            <div  style="margin-left: 10%; margin-right: 10%; ">
-                <a href="#successEmail" style="background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b" >Send</a>
+            <div  style="display: none;margin-left: 10%; margin-right: 10%; " id="btnsendemail">
+                <a href="#successEmail" style=" background-color: #1f069d; color: white; border-radius: 15px;"  class="ui-btn  ui-shadow-icon ui-btn-b" >Send</a>
             </div>
             <br/>
         </div>
